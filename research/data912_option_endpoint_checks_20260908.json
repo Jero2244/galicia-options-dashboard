@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://data912.com/eod/option_chain/GGAL",
+    "status": 500,
+    "retrieved_at": "2026-09-08T12:21:56.533639+00:00",
+    "body": "Internal Server Error"
+  },
+  {
+    "url": "https://data912.com/eod/option_chain/ggal",
+    "status": 500,
+    "retrieved_at": "2026-09-08T12:21:57.278284+00:00",
+    "body": "Internal Server Error"
+  },
+  {
+    "url": "https://data912.com/eod/option_chain/AAPL",
+    "status": 500,
+    "retrieved_at": "2026-09-08T12:21:58.024540+00:00",
+    "body": "Internal Server Error"
+  }
+]

@@ -1,0 +1,753 @@
+{
+  "retrieved_at": "2026-09-07T16:54:00.658843+00:00",
+  "rate_source": "Illustrative scenarios; not observed",
+  "liquidity": [
+    {
+      "expiration": "2026-09-18",
+      "type": "Call",
+      "contracts": 5,
+      "two_sided": 0,
+      "traded": 0,
+      "reported_volume": 0.0,
+      "unknown_strikes": 0,
+      "median_spread_pct": null,
+      "quoted_with_size_ge_5": 0,
+      "positive_oi": 0
+    },
+    {
+      "expiration": "2026-09-18",
+      "type": "Put",
+      "contracts": 2,
+      "two_sided": 0,
+      "traded": 0,
+      "reported_volume": 0.0,
+      "unknown_strikes": 0,
+      "median_spread_pct": null,
+      "quoted_with_size_ge_5": 0,
+      "positive_oi": 0
+    },
+    {
+      "expiration": "2026-10-16",
+      "type": "Call",
+      "contracts": 29,
+      "two_sided": 29,
+      "traded": 27,
+      "reported_volume": 13026.0,
+      "unknown_strikes": 3,
+      "median_spread_pct": 2.9635245266,
+      "quoted_with_size_ge_5": 13,
+      "positive_oi": 0
+    },
+    {
+      "expiration": "2026-10-16",
+      "type": "Put",
+      "contracts": 29,
+      "two_sided": 28,
+      "traded": 17,
+      "reported_volume": 8205.0,
+      "unknown_strikes": 3,
+      "median_spread_pct": 14.0842131197,
+      "quoted_with_size_ge_5": 15,
+      "positive_oi": 0
+    },
+    {
+      "expiration": "2026-12-18",
+      "type": "Call",
+      "contracts": 10,
+      "two_sided": 8,
+      "traded": 2,
+      "reported_volume": 12.0,
+      "unknown_strikes": 1,
+      "median_spread_pct": 41.4136277192,
+      "quoted_with_size_ge_5": 1,
+      "positive_oi": 0
+    },
+    {
+      "expiration": "2026-12-18",
+      "type": "Put",
+      "contracts": 12,
+      "two_sided": 4,
+      "traded": 0,
+      "reported_volume": 0.0,
+      "unknown_strikes": 0,
+      "median_spread_pct": 83.3061778683,
+      "quoted_with_size_ge_5": 0,
+      "positive_oi": 0
+    }
+  ],
+  "complete": {
+    "terms": [
+      {
+        "variance": null,
+        "value": null,
+        "minutes": 15935,
+        "rate": 0.0,
+        "forward": null,
+        "k0": null,
+        "atm": null,
+        "contributions": [],
+        "warnings": [],
+        "put_count": 0,
+        "call_count": 0,
+        "reason": "No valid same-strike call/put pair for the forward",
+        "partial": false,
+        "expiration": "2026-09-18",
+        "publication_blockers": [
+          "No valid same-strike call/put pair for the forward",
+          "Quote timestamps unavailable; synchronization unverified",
+          "American exercise and dividends have not been adjusted",
+          "ARS rates are user assumptions, not a verified discount curve"
+        ]
+      },
+      {
+        "variance": null,
+        "value": null,
+        "minutes": 56255,
+        "rate": 0.0,
+        "forward": null,
+        "k0": null,
+        "atm": null,
+        "contributions": [],
+        "warnings": [
+          "6 unresolved strikes; full strike ordering cannot be verified"
+        ],
+        "put_count": 0,
+        "call_count": 0,
+        "reason": "Unresolved strikes prevent a complete strip",
+        "partial": true,
+        "expiration": "2026-10-16",
+        "publication_blockers": [
+          "Unresolved instrument strikes",
+          "Unresolved strikes prevent a complete strip",
+          "Quote timestamps unavailable; synchronization unverified",
+          "American exercise and dividends have not been adjusted",
+          "ARS rates are user assumptions, not a verified discount curve"
+        ]
+      },
+      {
+        "variance": null,
+        "value": null,
+        "minutes": 146975,
+        "rate": 0.0,
+        "forward": null,
+        "k0": null,
+        "atm": null,
+        "contributions": [],
+        "warnings": [
+          "1 unresolved strikes; full strike ordering cannot be verified"
+        ],
+        "put_count": 0,
+        "call_count": 0,
+        "reason": "Unresolved strikes prevent a complete strip",
+        "partial": true,
+        "expiration": "2026-12-18",
+        "publication_blockers": [
+          "Unresolved instrument strikes",
+          "Unresolved strikes prevent a complete strip",
+          "Quote timestamps unavailable; synchronization unverified",
+          "American exercise and dividends have not been adjusted",
+          "ARS rates are user assumptions, not a verified discount curve"
+        ]
+      }
+    ],
+    "constant_30d": {
+      "value": null,
+      "expirations": [
+        "2026-09-18",
+        "2026-10-16"
+      ],
+      "weights": [],
+      "reason": "A required expiry cannot be calculated; later liquid expiries cannot replace it."
+    },
+    "publishable": false,
+    "status": "Research only; no validated index is published"
+  },
+  "partial": {
+    "terms": [
+      {
+        "variance": null,
+        "value": null,
+        "minutes": 15935,
+        "rate": 0.0,
+        "forward": null,
+        "k0": null,
+        "atm": null,
+        "contributions": [],
+        "warnings": [],
+        "put_count": 0,
+        "call_count": 0,
+        "reason": "No valid same-strike call/put pair for the forward",
+        "partial": false,
+        "expiration": "2026-09-18",
+        "publication_blockers": [
+          "No valid same-strike call/put pair for the forward",
+          "Quote timestamps unavailable; synchronization unverified",
+          "American exercise and dividends have not been adjusted",
+          "ARS rates are user assumptions, not a verified discount curve"
+        ]
+      },
+      {
+        "variance": 0.19227599539948964,
+        "value": 43.849286812842195,
+        "minutes": 56255,
+        "rate": 0.0,
+        "forward": 7124.33,
+        "k0": 7000.0,
+        "atm": 7200.0,
+        "contributions": [
+          {
+            "strike": 4200.0,
+            "type": "Put",
+            "symbols": "GFGV4200OC",
+            "bid": 0.82,
+            "ask": 1.04,
+            "mid": 0.9299999999999999,
+            "spread_pct": 23.655913978494635,
+            "min_size": 58.0,
+            "volume": 446.0,
+            "delta_k": 200.0,
+            "variance_bid": 0.00017372786818042478,
+            "variance_mid": 0.00019703282610706712,
+            "variance_ask": 0.00022033778403370948,
+            "weight_pct": 0.10092681299749123
+          },
+          {
+            "strike": 4400.0,
+            "type": "Put",
+            "symbols": "GFGV4400OC",
+            "bid": 0.888,
+            "ask": 1.55,
+            "mid": 1.219,
+            "spread_pct": 54.30680885972108,
+            "min_size": 1.0,
+            "volume": 133.0,
+            "delta_k": 200.0,
+            "variance_bid": 0.00017142013455553263,
+            "variance_mid": 0.00023531660362972328,
+            "variance_ask": 0.00029921307270391396,
+            "weight_pct": 0.12053704613076147
+          },
+          {
+            "strike": 4600.0,
+            "type": "Put",
+            "symbols": "GFGV4600OC",
+            "bid": 1.0,
+            "ask": 1.4,
+            "mid": 1.2,
+            "spread_pct": 33.33333333333333,
+            "min_size": 25.0,
+            "volume": 168.0,
+            "delta_k": 200.0,
+            "variance_bid": 0.0001766194611728695,
+            "variance_mid": 0.0002119433534074434,
+            "variance_ask": 0.00024726724564201727,
+            "weight_pct": 0.1085644844975758
+          },
+          {
+            "strike": 4800.0,
+            "type": "Put",
+            "symbols": "GFGV4800OC",
+            "bid": 1.6,
+            "ask": 1.7,
+            "mid": 1.65,
+            "spread_pct": 6.060606060606053,
+            "min_size": 12.0,
+            "volume": 108.0,
+            "delta_k": 200.0,
+            "variance_bid": 0.0002595324860012444,
+            "variance_mid": 0.0002676428761887832,
+            "variance_ask": 0.00027575326637632215,
+            "weight_pct": 0.13709564567955587
+          },
+          {
+            "strike": 5000.0,
+            "type": "Put",
+            "symbols": "GFGV5000OC",
+            "bid": 2.23,
+            "ask": 2.7,
+            "mid": 2.465,
+            "spread_pct": 19.066937119675465,
+            "min_size": 15.0,
+            "volume": 219.0,
+            "delta_k": 200.0,
+            "variance_bid": 0.00033336428761887837,
+            "variance_mid": 0.0003684946049240068,
+            "variance_ask": 0.0004036249222291353,
+            "weight_pct": 0.1887552790900952
+          },
+          {
+            "strike": 5200.0,
+            "type": "Put",
+            "symbols": "GFGV5200OC",
+            "bid": 4.3,
+            "ask": 4.65,
+            "mid": 4.475,
+            "spread_pct": 7.821229050279343,
+            "min_size": 4.0,
+            "volume": 402.0,
+            "delta_k": 200.0,
+            "variance_bid": 0.0005943140359910152,
+            "variance_mid": 0.0006185012351301843,
+            "variance_ask": 0.0006426884342693536,
+            "weight_pct": 0.3168170488646434
+          },
+          {
+            "strike": 5400.0,
+            "type": "Put",
+            "symbols": "GFGV5400OC",
+            "bid": 6.71,
+            "ask": 8.8,
+            "mid": 7.755000000000001,
+            "spread_pct": 26.950354609929086,
+            "min_size": 20.0,
+            "volume": 92.0,
+            "delta_k": 200.0,
+            "variance_bid": 0.0008599817190460986,
+            "variance_mid": 0.0009939132982418025,
+            "variance_ask": 0.0011278448774375064,
+            "weight_pct": 0.509115681733462
+          },
+          {
+            "strike": 5600.0,
+            "type": "Put",
+            "symbols": "GFGV5600OC",
+            "bid": 14.421,
+            "ask": 15.2,
+            "mid": 14.8105,
+            "spread_pct": 5.259781911481719,
+            "min_size": 1.0,
+            "volume": 1966.0,
+            "delta_k": 200.0,
+            "variance_bid": 0.0017185949911028317,
+            "variance_mid": 0.001765012905882289,
+            "variance_ask": 0.0018114308206617462,
+            "weight_pct": 0.9040987281649258
+          },
+          {
+            "strike": 5800.0,
+            "type": "Put",
+            "symbols": "GFGV5800OC",
+            "bid": 28.0,
+            "ask": 29.69,
+            "mid": 28.845,
+            "spread_pct": 5.858901022707579,
+            "min_size": 18.0,
+            "volume": 993.0,
+            "delta_k": 200.0,
+            "variance_bid": 0.0031106866336415495,
+            "variance_mid": 0.003204562712406803,
+            "variance_ask": 0.0032984387911720574,
+            "weight_pct": 1.6414843556985055
+          },
+          {
+            "strike": 6000.0,
+            "type": "Put",
+            "symbols": "GFGV6000OC",
+            "bid": 48.52,
+            "ask": 49.98,
+            "mid": 49.25,
+            "spread_pct": 2.9644670050761293,
+            "min_size": 1.0,
+            "volume": 1435.0,
+            "delta_k": 200.0,
+            "variance_bid": 0.00503700648831215,
+            "variance_mid": 0.005112789974224514,
+            "variance_ask": 0.005188573460136877,
+            "weight_pct": 2.618942273830062
+          },
+          {
+            "strike": 6200.0,
+            "type": "Put",
+            "symbols": "GFGV6200OC",
+            "bid": 78.5,
+            "ask": 82.0,
+            "mid": 80.25,
+            "spread_pct": 4.361370716510903,
+            "min_size": 1.0,
+            "volume": 177.0,
+            "delta_k": 200.0,
+            "variance_bid": 0.007632037517580817,
+            "variance_mid": 0.0078021784813485425,
+            "variance_ask": 0.007972319445116269,
+            "weight_pct": 3.996537146212463
+          },
+          {
+            "strike": 6400.0,
+            "type": "Put",
+            "symbols": "GFGV6400OC",
+            "bid": 120.0,
+            "ask": 126.0,
+            "mid": 123.0,
+            "spread_pct": 4.878048780487805,
+            "min_size": 4.0,
+            "volume": 369.0,
+            "delta_k": 200.0,
+            "variance_bid": 0.010949026753177497,
+            "variance_mid": 0.011222752422006934,
+            "variance_ask": 0.01149647809083637,
+            "weight_pct": 5.748669688154106
+          },
+          {
+            "strike": 6600.0,
+            "type": "Put",
+            "symbols": "GFGV6600OC",
+            "bid": 175.01,
+            "ask": 180.0,
+            "mid": 177.505,
+            "spread_pct": 2.811188417227689,
+            "min_size": 9.0,
+            "volume": 504.0,
+            "delta_k": 200.0,
+            "variance_bid": 0.015015134008290172,
+            "variance_mid": 0.015229194686826736,
+            "variance_ask": 0.0154432553653633,
+            "weight_pct": 7.800903608947521
+          },
+          {
+            "strike": 6800.0,
+            "type": "Put",
+            "symbols": "GFGV6800OC",
+            "bid": 247.611,
+            "ask": 249.96,
+            "mid": 248.7855,
+            "spread_pct": 0.9441868597647443,
+            "min_size": 1.0,
+            "volume": 232.0,
+            "delta_k": 200.0,
+            "variance_bid": 0.0200127296028127,
+            "variance_mid": 0.02010765652818558,
+            "variance_ask": 0.020202583453558454,
+            "weight_pct": 10.29981516448025
+          },
+          {
+            "strike": 7000.0,
+            "type": "Put/Call",
+            "symbols": "GFGC7000OC + GFGV7000OC",
+            "bid": 400.15049999999997,
+            "ask": 406.49,
+            "mid": 403.32025,
+            "spread_pct": 1.5718278464818078,
+            "min_size": 3.0,
+            "volume": 1551.0,
+            "delta_k": 200.0,
+            "variance_bid": 0.03051978730960876,
+            "variance_mid": 0.03076154658724213,
+            "variance_ask": 0.031003305864875503,
+            "weight_pct": 15.757094496716679
+          },
+          {
+            "strike": 7200.0,
+            "type": "Call",
+            "symbols": "GFGC7200OC",
+            "bid": 373.0,
+            "ask": 374.98,
+            "mid": 373.99,
+            "spread_pct": 0.529425920479162,
+            "min_size": 1.0,
+            "volume": 538.0,
+            "delta_k": 200.0,
+            "variance_bid": 0.02689044924401782,
+            "variance_mid": 0.026961820677668162,
+            "variance_ask": 0.027033192111318504,
+            "weight_pct": 13.810747616888111
+          },
+          {
+            "strike": 7400.0,
+            "type": "Call",
+            "symbols": "GFGC7400OC",
+            "bid": 290.0,
+            "ask": 292.98,
+            "mid": 291.49,
+            "spread_pct": 1.0223335277368069,
+            "min_size": 1.0,
+            "volume": 539.0,
+            "delta_k": 200.0,
+            "variance_bid": 0.019791958757143836,
+            "variance_mid": 0.019893648476275366,
+            "variance_ask": 0.0199953381954069,
+            "weight_pct": 10.19019307225404
+          },
+          {
+            "strike": 7600.0,
+            "type": "Call",
+            "symbols": "GFGC7600OC",
+            "bid": 224.0,
+            "ask": 227.0,
+            "mid": 225.5,
+            "spread_pct": 1.3303769401330376,
+            "min_size": 18.0,
+            "volume": 1153.0,
+            "delta_k": 200.0,
+            "variance_bid": 0.014493559329044559,
+            "variance_mid": 0.014590614413837268,
+            "variance_ask": 0.014687669498629978,
+            "weight_pct": 7.473801404359169
+          },
+          {
+            "strike": 7800.0,
+            "type": "Call",
+            "symbols": "GFGC7800OC",
+            "bid": 171.0,
+            "ask": 175.0,
+            "mid": 173.0,
+            "spread_pct": 2.3121387283236996,
+            "min_size": 5.0,
+            "volume": 502.0,
+            "delta_k": 200.0,
+            "variance_bid": 0.01050415505472492,
+            "variance_mid": 0.010627010669400064,
+            "variance_ask": 0.01074986628407521,
+            "weight_pct": 5.443510808549553
+          },
+          {
+            "strike": 8000.0,
+            "type": "Call",
+            "symbols": "GFGC8000OC",
+            "bid": 130.201,
+            "ask": 134.599,
+            "mid": 132.39999999999998,
+            "spread_pct": 3.321752265861025,
+            "min_size": 1.0,
+            "volume": 1857.0,
+            "delta_k": 250.0,
+            "variance_bid": 0.009503828215269754,
+            "variance_mid": 0.009664340947471336,
+            "variance_ask": 0.009824853679672918,
+            "weight_pct": 4.9503991330836
+          },
+          {
+            "strike": 8300.0,
+            "type": "Call",
+            "symbols": "GFGC8300OC",
+            "bid": 81.51,
+            "ask": 86.0,
+            "mid": 83.755,
+            "spread_pct": 5.360873977672969,
+            "min_size": 4.0,
+            "volume": 630.0,
+            "delta_k": 300.0,
+            "variance_bid": 0.006632850157839554,
+            "variance_mid": 0.006815536314192758,
+            "variance_ask": 0.006998222470545965,
+            "weight_pct": 3.4911459813622945
+          },
+          {
+            "strike": 8600.0,
+            "type": "Call",
+            "symbols": "GFGC8600OC",
+            "bid": 49.501,
+            "ask": 50.809,
+            "mid": 50.155,
+            "spread_pct": 2.60791546206759,
+            "min_size": 1.0,
+            "volume": 1601.0,
+            "delta_k": 300.0,
+            "variance_bid": 0.0037519975653627375,
+            "variance_mid": 0.003801568410552678,
+            "variance_ask": 0.003851139255742618,
+            "weight_pct": 1.9472906705430362
+          },
+          {
+            "strike": 8900.0,
+            "type": "Call",
+            "symbols": "GFGC8900OC",
+            "bid": 29.221,
+            "ask": 32.998,
+            "mid": 31.109499999999997,
+            "spread_pct": 12.140985872482675,
+            "min_size": 10.0,
+            "volume": 259.0,
+            "delta_k": 300.0,
+            "variance_bid": 0.0020680476392672007,
+            "variance_mid": 0.002201701790964819,
+            "variance_ask": 0.0023353559426624376,
+            "weight_pct": 1.1277854016680404
+          },
+          {
+            "strike": 9200.0,
+            "type": "Call",
+            "symbols": "GFGC9200OC",
+            "bid": 17.733,
+            "ask": 18.89,
+            "mid": 18.311500000000002,
+            "spread_pct": 6.318433771127433,
+            "min_size": 2.0,
+            "volume": 426.0,
+            "delta_k": 300.0,
+            "variance_bid": 0.0011744973393669356,
+            "variance_mid": 0.0012128127237251251,
+            "variance_ask": 0.0012511281080833144,
+            "weight_pct": 0.6212432993366749
+          },
+          {
+            "strike": 9500.0,
+            "type": "Call",
+            "symbols": "GFGC9500OC",
+            "bid": 11.281,
+            "ask": 11.89,
+            "mid": 11.5855,
+            "spread_pct": 5.256570713391739,
+            "min_size": 1.0,
+            "volume": 508.0,
+            "delta_k": 350.0,
+            "variance_bid": 0.0008175092139547584,
+            "variance_mid": 0.0008395756580332287,
+            "variance_ask": 0.000861642102111699,
+            "weight_pct": 0.43005877299613093
+          },
+          {
+            "strike": 9900.0,
+            "type": "Call",
+            "symbols": "GFGC9900OC",
+            "bid": 6.3,
+            "ask": 7.24,
+            "mid": 6.77,
+            "spread_pct": 13.884785819793212,
+            "min_size": 61.0,
+            "volume": 2050.0,
+            "delta_k": 400.0,
+            "variance_bid": 0.0004804568335890804,
+            "variance_mid": 0.000516300438634615,
+            "variance_ask": 0.0005521440436801496,
+            "weight_pct": 0.264466377761251
+          }
+        ],
+        "warnings": [
+          "6 unresolved strikes; full strike ordering cannot be verified",
+          "Put wing reaches the supplied universe edge without a two-zero stop",
+          "Call wing reaches the supplied universe edge without a two-zero stop"
+        ],
+        "put_count": 14,
+        "call_count": 11,
+        "reason": "Partial-strip diagnostic",
+        "partial": true,
+        "correction": 0.002947474217018322,
+        "weighted_spread_pct": 2.612592609734692,
+        "max_weight_pct": 15.757094496716679,
+        "max_gap_pct": 5.614563053648554,
+        "bid_sensitivity": 43.55752500196211,
+        "ask_sensitivity": 44.13912010556213,
+        "expiration": "2026-10-16",
+        "publication_blockers": [
+          "Unresolved instrument strikes",
+          "Quote timestamps unavailable; synchronization unverified",
+          "American exercise and dividends have not been adjusted",
+          "ARS rates are user assumptions, not a verified discount curve"
+        ]
+      },
+      {
+        "variance": null,
+        "value": null,
+        "minutes": 146975,
+        "rate": 0.0,
+        "forward": null,
+        "k0": null,
+        "atm": null,
+        "contributions": [],
+        "warnings": [
+          "1 unresolved strikes; full strike ordering cannot be verified"
+        ],
+        "put_count": 0,
+        "call_count": 0,
+        "reason": "No valid same-strike call/put pair for the forward",
+        "partial": true,
+        "expiration": "2026-12-18",
+        "publication_blockers": [
+          "Unresolved instrument strikes",
+          "No valid same-strike call/put pair for the forward",
+          "Quote timestamps unavailable; synchronization unverified",
+          "American exercise and dividends have not been adjusted",
+          "ARS rates are user assumptions, not a verified discount curve"
+        ]
+      }
+    ],
+    "constant_30d": {
+      "value": null,
+      "expirations": [
+        "2026-09-18",
+        "2026-10-16"
+      ],
+      "weights": [],
+      "reason": "A required expiry cannot be calculated; later liquid expiries cannot replace it."
+    },
+    "publishable": false,
+    "status": "Research only; no validated index is published"
+  },
+  "rate_scenarios": [
+    {
+      "expiration": "2026-09-18",
+      "rate": 0.0,
+      "value": null
+    },
+    {
+      "expiration": "2026-10-16",
+      "rate": 0.0,
+      "value": 43.849286812842195
+    },
+    {
+      "expiration": "2026-12-18",
+      "rate": 0.0,
+      "value": null
+    },
+    {
+      "expiration": "2026-09-18",
+      "rate": 0.2,
+      "value": null
+    },
+    {
+      "expiration": "2026-10-16",
+      "rate": 0.2,
+      "value": 44.3370180322517
+    },
+    {
+      "expiration": "2026-12-18",
+      "rate": 0.2,
+      "value": null
+    },
+    {
+      "expiration": "2026-09-18",
+      "rate": 0.4,
+      "value": null
+    },
+    {
+      "expiration": "2026-10-16",
+      "rate": 0.4,
+      "value": 44.829704981766476
+    },
+    {
+      "expiration": "2026-12-18",
+      "rate": 0.4,
+      "value": null
+    },
+    {
+      "expiration": "2026-09-18",
+      "rate": 0.6,
+      "value": null
+    },
+    {
+      "expiration": "2026-10-16",
+      "rate": 0.6,
+      "value": 45.3274005627182
+    },
+    {
+      "expiration": "2026-12-18",
+      "rate": 0.6,
+      "value": null
+    },
+    {
+      "expiration": "2026-09-18",
+      "rate": 1.0,
+      "value": null
+    },
+    {
+      "expiration": "2026-10-16",
+      "rate": 1.0,
+      "value": 46.33803143281533
+    },
+    {
+      "expiration": "2026-12-18",
+      "rate": 1.0,
+      "value": null
+    }
+  ]
+}

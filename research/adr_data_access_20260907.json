@@ -1,0 +1,10 @@
+{
+  "date": "2026-09-07",
+  "underlying": "GGAL",
+  "requests": [
+    {"endpoint": "/v1beta1/options/snapshots/GGAL", "feed": "opra", "result": "HTTP 403: access denied"},
+    {"endpoint": "/v1beta1/options/snapshots/GGAL", "feed": "indicative", "result": "92 contracts", "archive": "adr_snapshot_20260907_indicative.json"},
+    {"endpoint": "/v1beta1/options/bars", "feed": null, "session_date": "2026-09-04", "result": "11 bars for 11 of 92 requested symbols", "archive": "adr_bars_20260904.json"}
+  ],
+  "note": "Read-only market data. The historical-bars endpoint rejected the feed parameter; the successful request omitted it."
+}

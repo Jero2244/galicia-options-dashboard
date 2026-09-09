@@ -1,0 +1,3083 @@
+{
+  "data912_retrieved_at": "2026-09-08T12:21:28.751779+00:00",
+  "byma_archive_retrieved_at": "2026-09-07T16:54:00.658843+00:00",
+  "limitation": "Different retrieval times; neither source supplies dated local quotes. Differences do not establish errors. Data912 settlement and contract metadata are unverified. c can retain a price when volume is zero.",
+  "data912_ggal_contracts": 87,
+  "byma_archived_ggal_contracts": 87,
+  "matched_symbols": 83,
+  "data912_only": [
+    "GFGC10700D",
+    "GFGC11100D",
+    "GFGC9900DI",
+    "GFGV7600DI"
+  ],
+  "byma_only": [
+    "GFGV4200SE",
+    "GFGV5000SE",
+    "GFGV7800DI",
+    "GFGV8000DI"
+  ],
+  "data912_positive_noncrossed_bid_ask": 73,
+  "data912_positive_volume": 49,
+  "data912_positive_c_with_zero_volume": 21,
+  "field_summary": {
+    "bid": {
+      "positive_pairs": 75,
+      "equal": 5,
+      "median_absolute_pct_difference": 2.32710586692888
+    },
+    "ask": {
+      "positive_pairs": 74,
+      "equal": 12,
+      "median_absolute_pct_difference": 2.152789855072468
+    },
+    "price_vs_trade": {
+      "positive_pairs": 46,
+      "equal": 3,
+      "median_absolute_pct_difference": 2.2105940814086953
+    },
+    "volume": {
+      "positive_pairs": 46,
+      "equal": 2,
+      "median_absolute_pct_difference": 82.91473093302362
+    }
+  },
+  "contracts": [
+    {
+      "symbol": "GFGC10300D",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGC10300D",
+        "q_bid": 0.0,
+        "px_bid": 0.0,
+        "px_ask": 91.0,
+        "q_ask": 2.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 100.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 0.0,
+        "offerPrice": 0.0,
+        "trade": 0.0,
+        "previousClosingPrice": 100.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {}
+    },
+    {
+      "symbol": "GFGC10300O",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC10300O",
+        "q_bid": 40.0,
+        "px_bid": 2.2,
+        "px_ask": 5.0,
+        "q_ask": 50.0,
+        "v": 356.0,
+        "q_op": 88.0,
+        "c": 4.5,
+        "pct_change": -9.98
+      },
+      "byma": {
+        "bidPrice": 4.4,
+        "offerPrice": 4.7,
+        "trade": 4.41,
+        "previousClosingPrice": 4.999,
+        "volume": 204.0,
+        "tradeHour": "13:25:59"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -2.2,
+          "pct_of_byma": -50.0
+        },
+        "ask": {
+          "absolute": 0.2999999999999998,
+          "pct_of_byma": 6.382978723404253
+        },
+        "price_vs_trade": {
+          "absolute": 0.08999999999999986,
+          "pct_of_byma": 2.0408163265306145
+        },
+        "volume": {
+          "absolute": 152.0,
+          "pct_of_byma": 74.50980392156863
+        }
+      }
+    },
+    {
+      "symbol": "GFGC10700O",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC10700O",
+        "q_bid": 1.0,
+        "px_bid": 2.98,
+        "px_ask": 3.239,
+        "q_ask": 20.0,
+        "v": 565.0,
+        "q_op": 157.0,
+        "c": 2.98,
+        "pct_change": -12.86
+      },
+      "byma": {
+        "bidPrice": 3.051,
+        "offerPrice": 3.377,
+        "trade": 3.333,
+        "previousClosingPrice": 3.42,
+        "volume": 293.0,
+        "tradeHour": "13:26:45"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -0.07100000000000017,
+          "pct_of_byma": -2.32710586692888
+        },
+        "ask": {
+          "absolute": -0.1379999999999999,
+          "pct_of_byma": -4.086467278649685
+        },
+        "price_vs_trade": {
+          "absolute": -0.3530000000000002,
+          "pct_of_byma": -10.591059105910594
+        },
+        "volume": {
+          "absolute": 272.0,
+          "pct_of_byma": 92.83276450511946
+        }
+      }
+    },
+    {
+      "symbol": "GFGC11100O",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC11100O",
+        "q_bid": 8.0,
+        "px_bid": 2.26,
+        "px_ask": 2.35,
+        "q_ask": 13.0,
+        "v": 2132.0,
+        "q_op": 426.0,
+        "c": 2.35,
+        "pct_change": -10.33
+      },
+      "byma": {
+        "bidPrice": 2.21,
+        "offerPrice": 2.3,
+        "trade": 2.399,
+        "previousClosingPrice": 2.621,
+        "volume": 1058.0,
+        "tradeHour": "13:29:59"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 0.04999999999999982,
+          "pct_of_byma": 2.262443438914019
+        },
+        "ask": {
+          "absolute": 0.050000000000000266,
+          "pct_of_byma": 2.1739130434782705
+        },
+        "price_vs_trade": {
+          "absolute": -0.04899999999999993,
+          "pct_of_byma": -2.0425177157148755
+        },
+        "volume": {
+          "absolute": 1074.0,
+          "pct_of_byma": 101.5122873345936
+        }
+      }
+    },
+    {
+      "symbol": "GFGC4200OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC4200OC",
+        "q_bid": 2.0,
+        "px_bid": 2806.4,
+        "px_ask": 2859.01,
+        "q_ask": 12.0,
+        "v": 7.0,
+        "q_op": 2.0,
+        "c": 2871.76,
+        "pct_change": -3.13
+      },
+      "byma": {
+        "bidPrice": 2826.33,
+        "offerPrice": 2879.06,
+        "trade": 2813.9,
+        "previousClosingPrice": 2964.84,
+        "volume": 1.0,
+        "tradeHour": "11:00:18"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -19.929999999999836,
+          "pct_of_byma": -0.7051547413076231
+        },
+        "ask": {
+          "absolute": -20.049999999999727,
+          "pct_of_byma": -0.696407855341663
+        },
+        "price_vs_trade": {
+          "absolute": 57.86000000000013,
+          "pct_of_byma": 2.056220903372541
+        },
+        "volume": {
+          "absolute": 6.0,
+          "pct_of_byma": 600.0
+        }
+      }
+    },
+    {
+      "symbol": "GFGC4400OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC4400OC",
+        "q_bid": 2.0,
+        "px_bid": 2611.46,
+        "px_ask": 2664.34,
+        "q_ask": 16.0,
+        "v": 2.0,
+        "q_op": 2.0,
+        "c": 2661.28,
+        "pct_change": -1.7
+      },
+      "byma": {
+        "bidPrice": 2631.38,
+        "offerPrice": 2684.39,
+        "trade": 2661.28,
+        "previousClosingPrice": 2707.446,
+        "volume": 3.0,
+        "tradeHour": "11:00:21"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -19.920000000000073,
+          "pct_of_byma": -0.7570172305026324
+        },
+        "ask": {
+          "absolute": -20.049999999999727,
+          "pct_of_byma": -0.7469108438043603
+        },
+        "price_vs_trade": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        },
+        "volume": {
+          "absolute": -1.0,
+          "pct_of_byma": -33.333333333333336
+        }
+      }
+    },
+    {
+      "symbol": "GFGC4600DI",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGC4600DI",
+        "q_bid": 5.0,
+        "px_bid": 1798.8,
+        "px_ask": 0.0,
+        "q_ask": 0.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 2929.114,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 1798.8,
+        "offerPrice": 0.0,
+        "trade": 0.0,
+        "previousClosingPrice": 2929.114,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        }
+      }
+    },
+    {
+      "symbol": "GFGC4600OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC4600OC",
+        "q_bid": 2.0,
+        "px_bid": 2416.51,
+        "px_ask": 2469.66,
+        "q_ask": 14.0,
+        "v": 1.0,
+        "q_op": 1.0,
+        "c": 2499.74,
+        "pct_change": -0.12
+      },
+      "byma": {
+        "bidPrice": 2436.44,
+        "offerPrice": 2489.71,
+        "trade": 2409.51,
+        "previousClosingPrice": 2502.916,
+        "volume": 1.0,
+        "tradeHour": "11:00:19"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -19.929999999999836,
+          "pct_of_byma": -0.8179967493556095
+        },
+        "ask": {
+          "absolute": -20.050000000000182,
+          "pct_of_byma": -0.8053146752031393
+        },
+        "price_vs_trade": {
+          "absolute": 90.22999999999956,
+          "pct_of_byma": 3.744744782134113
+        },
+        "volume": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        }
+      }
+    },
+    {
+      "symbol": "GFGC4800OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC4800OC",
+        "q_bid": 2.0,
+        "px_bid": 2221.56,
+        "px_ask": 2276.03,
+        "q_ask": 15.0,
+        "v": 2.0,
+        "q_op": 0.0,
+        "c": 2261.213,
+        "pct_change": -4.79
+      },
+      "byma": {
+        "bidPrice": 2241.49,
+        "offerPrice": 2296.08,
+        "trade": 2261.213,
+        "previousClosingPrice": 2375.0,
+        "volume": 2.0,
+        "tradeHour": "11:28:50"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -19.929999999999836,
+          "pct_of_byma": -0.8891407055128475
+        },
+        "ask": {
+          "absolute": -20.049999999999727,
+          "pct_of_byma": -0.8732274136789564
+        },
+        "price_vs_trade": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        },
+        "volume": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        }
+      }
+    },
+    {
+      "symbol": "GFGC5000OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC5000OC",
+        "q_bid": 1.0,
+        "px_bid": 1726.0,
+        "px_ask": 2080.31,
+        "q_ask": 15.0,
+        "v": 4.0,
+        "q_op": 3.0,
+        "c": 2094.25,
+        "pct_change": -1.84
+      },
+      "byma": {
+        "bidPrice": 2046.54,
+        "offerPrice": 2100.36,
+        "trade": 2035.2,
+        "previousClosingPrice": 2133.58,
+        "volume": 1.0,
+        "tradeHour": "11:00:18"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -320.53999999999996,
+          "pct_of_byma": -15.662532860339883
+        },
+        "ask": {
+          "absolute": -20.050000000000182,
+          "pct_of_byma": -0.9545982593460289
+        },
+        "price_vs_trade": {
+          "absolute": 59.049999999999955,
+          "pct_of_byma": 2.901434748427678
+        },
+        "volume": {
+          "absolute": 3.0,
+          "pct_of_byma": 300.0
+        }
+      }
+    },
+    {
+      "symbol": "GFGC5200OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC5200OC",
+        "q_bid": 2.0,
+        "px_bid": 1831.66,
+        "px_ask": 2490.0,
+        "q_ask": 1.0,
+        "v": 16.0,
+        "q_op": 8.0,
+        "c": 1899.53,
+        "pct_change": -8.54
+      },
+      "byma": {
+        "bidPrice": 1851.59,
+        "offerPrice": 1905.68,
+        "trade": 1886.997,
+        "previousClosingPrice": 2076.93,
+        "volume": 5.0,
+        "tradeHour": "12:24:25"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -19.929999999999836,
+          "pct_of_byma": -1.0763721990289299
+        },
+        "ask": {
+          "absolute": 584.3199999999999,
+          "pct_of_byma": 30.662020905923338
+        },
+        "price_vs_trade": {
+          "absolute": 12.532999999999902,
+          "pct_of_byma": 0.664176996571797
+        },
+        "volume": {
+          "absolute": 11.0,
+          "pct_of_byma": 220.00000000000003
+        }
+      }
+    },
+    {
+      "symbol": "GFGC5400OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC5400OC",
+        "q_bid": 1.0,
+        "px_bid": 1600.0,
+        "px_ask": 1696.81,
+        "q_ask": 15.0,
+        "v": 5.0,
+        "q_op": 5.0,
+        "c": 1636.72,
+        "pct_change": -2.57
+      },
+      "byma": {
+        "bidPrice": 1656.64,
+        "offerPrice": 1716.86,
+        "trade": 0.0,
+        "previousClosingPrice": 1680.061,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": -56.6400000000001,
+          "pct_of_byma": -3.4189685145837423
+        },
+        "ask": {
+          "absolute": -20.049999999999955,
+          "pct_of_byma": -1.1678296424868617
+        }
+      }
+    },
+    {
+      "symbol": "GFGC5600OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC5600OC",
+        "q_bid": 3.0,
+        "px_bid": 1350.0,
+        "px_ask": 1508.4,
+        "q_ask": 15.0,
+        "v": 25.0,
+        "q_op": 15.0,
+        "c": 1500.0,
+        "pct_change": -6.25
+      },
+      "byma": {
+        "bidPrice": 1461.7,
+        "offerPrice": 1528.45,
+        "trade": 1510.762,
+        "previousClosingPrice": 1600.0,
+        "volume": 8.0,
+        "tradeHour": "12:25:00"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -111.70000000000005,
+          "pct_of_byma": -7.641786960388597
+        },
+        "ask": {
+          "absolute": -20.049999999999955,
+          "pct_of_byma": -1.3117864503254917
+        },
+        "price_vs_trade": {
+          "absolute": -10.761999999999944,
+          "pct_of_byma": -0.7123557516008461
+        },
+        "volume": {
+          "absolute": 17.0,
+          "pct_of_byma": 212.5
+        }
+      }
+    },
+    {
+      "symbol": "GFGC5800OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC5800OC",
+        "q_bid": 1.0,
+        "px_bid": 1300.0,
+        "px_ask": 1360.0,
+        "q_ask": 2.0,
+        "v": 13.0,
+        "q_op": 7.0,
+        "c": 1330.0,
+        "pct_change": -10.73
+      },
+      "byma": {
+        "bidPrice": 1281.79,
+        "offerPrice": 1365.34,
+        "trade": 1300.18,
+        "previousClosingPrice": 1490.0,
+        "volume": 3.0,
+        "tradeHour": "11:00:18"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 18.210000000000036,
+          "pct_of_byma": 1.4206695324507246
+        },
+        "ask": {
+          "absolute": -5.339999999999918,
+          "pct_of_byma": -0.391111371526498
+        },
+        "price_vs_trade": {
+          "absolute": 29.819999999999936,
+          "pct_of_byma": 2.293528588349303
+        },
+        "volume": {
+          "absolute": 10.0,
+          "pct_of_byma": 333.3333333333333
+        }
+      }
+    },
+    {
+      "symbol": "GFGC6000OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC6000OC",
+        "q_bid": 7.0,
+        "px_bid": 1115.5,
+        "px_ask": 1200.0,
+        "q_ask": 2.0,
+        "v": 99.0,
+        "q_op": 40.0,
+        "c": 1130.0,
+        "pct_change": -5.83
+      },
+      "byma": {
+        "bidPrice": 1125.0,
+        "offerPrice": 1239.79,
+        "trade": 1245.765,
+        "previousClosingPrice": 1200.045,
+        "volume": 17.0,
+        "tradeHour": "13:06:41"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -9.5,
+          "pct_of_byma": -0.8444444444444477
+        },
+        "ask": {
+          "absolute": -39.789999999999964,
+          "pct_of_byma": -3.209414497616525
+        },
+        "price_vs_trade": {
+          "absolute": -115.7650000000001,
+          "pct_of_byma": -9.292683612077724
+        },
+        "volume": {
+          "absolute": 82.0,
+          "pct_of_byma": 482.35294117647055
+        }
+      }
+    },
+    {
+      "symbol": "GFGC6200OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC6200OC",
+        "q_bid": 2.0,
+        "px_bid": 900.0,
+        "px_ask": 1600.0,
+        "q_ask": 10.0,
+        "v": 0.0,
+        "q_op": 7.0,
+        "c": 1015.0,
+        "pct_change": -7.72
+      },
+      "byma": {
+        "bidPrice": 900.0,
+        "offerPrice": 1100.0,
+        "trade": 0.0,
+        "previousClosingPrice": 1015.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        },
+        "ask": {
+          "absolute": 500.0,
+          "pct_of_byma": 45.45454545454546
+        }
+      }
+    },
+    {
+      "symbol": "GFGC6400OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC6400OC",
+        "q_bid": 5.0,
+        "px_bid": 820.061,
+        "px_ask": 835.0,
+        "q_ask": 37.0,
+        "v": 200.0,
+        "q_op": 49.0,
+        "c": 834.0,
+        "pct_change": -1.88
+      },
+      "byma": {
+        "bidPrice": 828.296,
+        "offerPrice": 850.0,
+        "trade": 850.0,
+        "previousClosingPrice": 850.0,
+        "volume": 37.0,
+        "tradeHour": "13:24:09"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -8.235000000000014,
+          "pct_of_byma": -0.9942097993953847
+        },
+        "ask": {
+          "absolute": -15.0,
+          "pct_of_byma": -1.764705882352946
+        },
+        "price_vs_trade": {
+          "absolute": -16.0,
+          "pct_of_byma": -1.8823529411764683
+        },
+        "volume": {
+          "absolute": 163.0,
+          "pct_of_byma": 440.5405405405405
+        }
+      }
+    },
+    {
+      "symbol": "GFGC6600OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC6600OC",
+        "q_bid": 12.0,
+        "px_bid": 687.1,
+        "px_ask": 714.0,
+        "q_ask": 3.0,
+        "v": 381.0,
+        "q_op": 122.0,
+        "c": 687.1,
+        "pct_change": -7.01
+      },
+      "byma": {
+        "bidPrice": 702.001,
+        "offerPrice": 714.99,
+        "trade": 710.0,
+        "previousClosingPrice": 738.917,
+        "volume": 297.0,
+        "tradeHour": "13:25:57"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -14.900999999999954,
+          "pct_of_byma": -2.1226465489365354
+        },
+        "ask": {
+          "absolute": -0.9900000000000091,
+          "pct_of_byma": -0.13846347501363931
+        },
+        "price_vs_trade": {
+          "absolute": -22.899999999999977,
+          "pct_of_byma": -3.22535211267605
+        },
+        "volume": {
+          "absolute": 84.0,
+          "pct_of_byma": 28.282828282828287
+        }
+      }
+    },
+    {
+      "symbol": "GFGC6800OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC6800OC",
+        "q_bid": 4.0,
+        "px_bid": 565.001,
+        "px_ask": 575.0,
+        "q_ask": 20.0,
+        "v": 302.0,
+        "q_op": 100.0,
+        "c": 567.0,
+        "pct_change": -8.04
+      },
+      "byma": {
+        "bidPrice": 571.79,
+        "offerPrice": 588.99,
+        "trade": 577.196,
+        "previousClosingPrice": 616.63,
+        "volume": 172.0,
+        "tradeHour": "12:41:33"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -6.788999999999987,
+          "pct_of_byma": -1.1873240175588884
+        },
+        "ask": {
+          "absolute": -13.990000000000009,
+          "pct_of_byma": -2.3752525509771028
+        },
+        "price_vs_trade": {
+          "absolute": -10.196000000000026,
+          "pct_of_byma": -1.7664710081151003
+        },
+        "volume": {
+          "absolute": 130.0,
+          "pct_of_byma": 75.5813953488372
+        }
+      }
+    },
+    {
+      "symbol": "GFGC6800SE",
+      "byma_expiration": "2026-09-18",
+      "data912": {
+        "symbol": "GFGC6800SE",
+        "q_bid": 2.0,
+        "px_bid": 171.8,
+        "px_ask": 0.0,
+        "q_ask": 0.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 400.0,
+        "pct_change": 33.33
+      },
+      "byma": {
+        "bidPrice": 193.8,
+        "offerPrice": 0.0,
+        "trade": 0.0,
+        "previousClosingPrice": 400.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": -22.0,
+          "pct_of_byma": -11.351909184726516
+        }
+      }
+    },
+    {
+      "symbol": "GFGC7000DI",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGC7000DI",
+        "q_bid": 1.0,
+        "px_bid": 680.0,
+        "px_ask": 1000.0,
+        "q_ask": 1.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 0.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 550.0,
+        "offerPrice": 1000.0,
+        "trade": 0.0,
+        "previousClosingPrice": 0.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": 130.0,
+          "pct_of_byma": 23.636363636363633
+        },
+        "ask": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        }
+      }
+    },
+    {
+      "symbol": "GFGC7000OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC7000OC",
+        "q_bid": 2.0,
+        "px_bid": 458.0,
+        "px_ask": 460.0,
+        "q_ask": 1.0,
+        "v": 1573.0,
+        "q_op": 352.0,
+        "c": 460.0,
+        "pct_change": -8.28
+      },
+      "byma": {
+        "bidPrice": 465.001,
+        "offerPrice": 476.98,
+        "trade": 470.0,
+        "previousClosingPrice": 501.552,
+        "volume": 861.0,
+        "tradeHour": "13:33:51"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -7.000999999999976,
+          "pct_of_byma": -1.5055881600254617
+        },
+        "ask": {
+          "absolute": -16.980000000000018,
+          "pct_of_byma": -3.559897689630598
+        },
+        "price_vs_trade": {
+          "absolute": -10.0,
+          "pct_of_byma": -2.127659574468088
+        },
+        "volume": {
+          "absolute": 712.0,
+          "pct_of_byma": 82.6945412311266
+        }
+      }
+    },
+    {
+      "symbol": "GFGC7200OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC7200OC",
+        "q_bid": 1.0,
+        "px_bid": 365.301,
+        "px_ask": 371.0,
+        "q_ask": 8.0,
+        "v": 878.0,
+        "q_op": 214.0,
+        "c": 365.4,
+        "pct_change": -8.58
+      },
+      "byma": {
+        "bidPrice": 373.0,
+        "offerPrice": 374.98,
+        "trade": 375.0,
+        "previousClosingPrice": 399.737,
+        "volume": 538.0,
+        "tradeHour": "13:24:24"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -7.699000000000012,
+          "pct_of_byma": -2.0640750670241292
+        },
+        "ask": {
+          "absolute": -3.980000000000018,
+          "pct_of_byma": -1.061389940796842
+        },
+        "price_vs_trade": {
+          "absolute": -9.600000000000023,
+          "pct_of_byma": -2.5600000000000067
+        },
+        "volume": {
+          "absolute": 340.0,
+          "pct_of_byma": 63.19702602230484
+        }
+      }
+    },
+    {
+      "symbol": "GFGC7200SE",
+      "byma_expiration": "2026-09-18",
+      "data912": {
+        "symbol": "GFGC7200SE",
+        "q_bid": 4.0,
+        "px_bid": 25.9,
+        "px_ask": 422.0,
+        "q_ask": 2.0,
+        "v": 0.0,
+        "q_op": 2.0,
+        "c": 210.0,
+        "pct_change": -8.69
+      },
+      "byma": {
+        "bidPrice": 84.0,
+        "offerPrice": 0.0,
+        "trade": 0.0,
+        "previousClosingPrice": 210.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": -58.1,
+          "pct_of_byma": -69.16666666666667
+        }
+      }
+    },
+    {
+      "symbol": "GFGC7400OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC7400OC",
+        "q_bid": 5.0,
+        "px_bid": 285.0,
+        "px_ask": 288.99,
+        "q_ask": 3.0,
+        "v": 881.0,
+        "q_op": 233.0,
+        "c": 286.11,
+        "pct_change": -9.24
+      },
+      "byma": {
+        "bidPrice": 290.0,
+        "offerPrice": 292.98,
+        "trade": 290.0,
+        "previousClosingPrice": 315.271,
+        "volume": 539.0,
+        "tradeHour": "13:33:40"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -5.0,
+          "pct_of_byma": -1.7241379310344862
+        },
+        "ask": {
+          "absolute": -3.990000000000009,
+          "pct_of_byma": -1.361867704280162
+        },
+        "price_vs_trade": {
+          "absolute": -3.8899999999999864,
+          "pct_of_byma": -1.3413793103448257
+        },
+        "volume": {
+          "absolute": 342.0,
+          "pct_of_byma": 63.4508348794063
+        }
+      }
+    },
+    {
+      "symbol": "GFGC7400SE",
+      "byma_expiration": "2026-09-18",
+      "data912": {
+        "symbol": "GFGC7400SE",
+        "q_bid": 0.0,
+        "px_bid": 0.0,
+        "px_ask": 210.0,
+        "q_ask": 2.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 75.5,
+        "pct_change": -5.62
+      },
+      "byma": {
+        "bidPrice": 0.0,
+        "offerPrice": 232.0,
+        "trade": 0.0,
+        "previousClosingPrice": 75.5,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "ask": {
+          "absolute": -22.0,
+          "pct_of_byma": -9.482758620689658
+        }
+      }
+    },
+    {
+      "symbol": "GFGC7600OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC7600OC",
+        "q_bid": 18.0,
+        "px_bid": 221.0,
+        "px_ask": 224.5,
+        "q_ask": 9.0,
+        "v": 2209.0,
+        "q_op": 388.0,
+        "c": 224.5,
+        "pct_change": -9.04
+      },
+      "byma": {
+        "bidPrice": 224.0,
+        "offerPrice": 227.0,
+        "trade": 227.0,
+        "previousClosingPrice": 246.837,
+        "volume": 1153.0,
+        "tradeHour": "13:33:54"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -3.0,
+          "pct_of_byma": -1.3392857142857095
+        },
+        "ask": {
+          "absolute": -2.5,
+          "pct_of_byma": -1.1013215859030812
+        },
+        "price_vs_trade": {
+          "absolute": -2.5,
+          "pct_of_byma": -1.1013215859030812
+        },
+        "volume": {
+          "absolute": 1056.0,
+          "pct_of_byma": 91.58716392020816
+        }
+      }
+    },
+    {
+      "symbol": "GFGC7800DI",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGC7800DI",
+        "q_bid": 1.0,
+        "px_bid": 410.01,
+        "px_ask": 499.99,
+        "q_ask": 19.0,
+        "v": 0.0,
+        "q_op": 10.0,
+        "c": 480.0,
+        "pct_change": -4.81
+      },
+      "byma": {
+        "bidPrice": 400.01,
+        "offerPrice": 549.0,
+        "trade": 0.0,
+        "previousClosingPrice": 480.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": 10.0,
+          "pct_of_byma": 2.4999375015624548
+        },
+        "ask": {
+          "absolute": -49.00999999999999,
+          "pct_of_byma": -8.927140255009103
+        }
+      }
+    },
+    {
+      "symbol": "GFGC7800OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC7800OC",
+        "q_bid": 5.0,
+        "px_bid": 168.0,
+        "px_ask": 172.0,
+        "q_ask": 1.0,
+        "v": 732.0,
+        "q_op": 209.0,
+        "c": 168.0,
+        "pct_change": -9.9
+      },
+      "byma": {
+        "bidPrice": 171.0,
+        "offerPrice": 175.0,
+        "trade": 171.0,
+        "previousClosingPrice": 186.471,
+        "volume": 502.0,
+        "tradeHour": "13:29:38"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -3.0,
+          "pct_of_byma": -1.7543859649122862
+        },
+        "ask": {
+          "absolute": -3.0,
+          "pct_of_byma": -1.7142857142857126
+        },
+        "price_vs_trade": {
+          "absolute": -3.0,
+          "pct_of_byma": -1.7543859649122862
+        },
+        "volume": {
+          "absolute": 230.0,
+          "pct_of_byma": 45.81673306772909
+        }
+      }
+    },
+    {
+      "symbol": "GFGC8000DI",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGC8000DI",
+        "q_bid": 5.0,
+        "px_bid": 345.0,
+        "px_ask": 380.0,
+        "q_ask": 85.0,
+        "v": 145.0,
+        "q_op": 4.0,
+        "c": 348.0,
+        "pct_change": -8.42
+      },
+      "byma": {
+        "bidPrice": 340.0,
+        "offerPrice": 470.0,
+        "trade": 340.0,
+        "previousClosingPrice": 380.0,
+        "volume": 5.0,
+        "tradeHour": "12:30:36"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 5.0,
+          "pct_of_byma": 1.4705882352941124
+        },
+        "ask": {
+          "absolute": -90.0,
+          "pct_of_byma": -19.14893617021277
+        },
+        "price_vs_trade": {
+          "absolute": 8.0,
+          "pct_of_byma": 2.35294117647058
+        },
+        "volume": {
+          "absolute": 140.0,
+          "pct_of_byma": 2800.0
+        }
+      }
+    },
+    {
+      "symbol": "GFGC8000OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC8000OC",
+        "q_bid": 1.0,
+        "px_bid": 128.5,
+        "px_ask": 131.0,
+        "q_ask": 9.0,
+        "v": 3031.0,
+        "q_op": 494.0,
+        "c": 131.0,
+        "pct_change": -8.55
+      },
+      "byma": {
+        "bidPrice": 130.201,
+        "offerPrice": 134.599,
+        "trade": 134.599,
+        "previousClosingPrice": 143.253,
+        "volume": 1857.0,
+        "tradeHour": "13:30:12"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -1.7009999999999934,
+          "pct_of_byma": -1.3064415787897077
+        },
+        "ask": {
+          "absolute": -3.5989999999999895,
+          "pct_of_byma": -2.6738683051137024
+        },
+        "price_vs_trade": {
+          "absolute": -3.5989999999999895,
+          "pct_of_byma": -2.6738683051137024
+        },
+        "volume": {
+          "absolute": 1174.0,
+          "pct_of_byma": 63.22024771136241
+        }
+      }
+    },
+    {
+      "symbol": "GFGC8300DI",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGC8300DI",
+        "q_bid": 5.0,
+        "px_bid": 231.0,
+        "px_ask": 290.0,
+        "q_ask": 30.0,
+        "v": 0.0,
+        "q_op": 1.0,
+        "c": 300.0,
+        "pct_change": -11.75
+      },
+      "byma": {
+        "bidPrice": 202.0,
+        "offerPrice": 320.0,
+        "trade": 0.0,
+        "previousClosingPrice": 300.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": 29.0,
+          "pct_of_byma": 14.356435643564346
+        },
+        "ask": {
+          "absolute": -30.0,
+          "pct_of_byma": -9.375
+        }
+      }
+    },
+    {
+      "symbol": "GFGC8300OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC8300OC",
+        "q_bid": 2.0,
+        "px_bid": 82.001,
+        "px_ask": 83.0,
+        "q_ask": 1.0,
+        "v": 1427.0,
+        "q_op": 278.0,
+        "c": 82.161,
+        "pct_change": -10.61
+      },
+      "byma": {
+        "bidPrice": 81.51,
+        "offerPrice": 86.0,
+        "trade": 85.01,
+        "previousClosingPrice": 91.921,
+        "volume": 630.0,
+        "tradeHour": "13:17:26"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 0.49099999999999966,
+          "pct_of_byma": 0.6023800760642795
+        },
+        "ask": {
+          "absolute": -3.0,
+          "pct_of_byma": -3.488372093023251
+        },
+        "price_vs_trade": {
+          "absolute": -2.8490000000000038,
+          "pct_of_byma": -3.351370427008593
+        },
+        "volume": {
+          "absolute": 797.0,
+          "pct_of_byma": 126.5079365079365
+        }
+      }
+    },
+    {
+      "symbol": "GFGC8600DI",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGC8600DI",
+        "q_bid": 11.0,
+        "px_bid": 180.01,
+        "px_ask": 239.99,
+        "q_ask": 1.0,
+        "v": 0.0,
+        "q_op": 9.0,
+        "c": 239.99,
+        "pct_change": 9.08
+      },
+      "byma": {
+        "bidPrice": 175.0,
+        "offerPrice": 239.99,
+        "trade": 0.0,
+        "previousClosingPrice": 239.99,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": 5.009999999999991,
+          "pct_of_byma": 2.8628571428571448
+        },
+        "ask": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        }
+      }
+    },
+    {
+      "symbol": "GFGC8600OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC8600OC",
+        "q_bid": 25.0,
+        "px_bid": 48.1,
+        "px_ask": 49.0,
+        "q_ask": 22.0,
+        "v": 2675.0,
+        "q_op": 360.0,
+        "c": 49.0,
+        "pct_change": -12.79
+      },
+      "byma": {
+        "bidPrice": 49.501,
+        "offerPrice": 50.809,
+        "trade": 49.501,
+        "previousClosingPrice": 56.192,
+        "volume": 1601.0,
+        "tradeHour": "13:29:44"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -1.4009999999999962,
+          "pct_of_byma": -2.8302458536191066
+        },
+        "ask": {
+          "absolute": -1.8089999999999975,
+          "pct_of_byma": -3.5603928437875187
+        },
+        "price_vs_trade": {
+          "absolute": -0.5009999999999977,
+          "pct_of_byma": -1.0121007656410885
+        },
+        "volume": {
+          "absolute": 1074.0,
+          "pct_of_byma": 67.08307307932542
+        }
+      }
+    },
+    {
+      "symbol": "GFGC8600SE",
+      "byma_expiration": "2026-09-18",
+      "data912": {
+        "symbol": "GFGC8600SE",
+        "q_bid": 0.0,
+        "px_bid": 0.0,
+        "px_ask": 45.0,
+        "q_ask": 1.0,
+        "v": 0.0,
+        "q_op": 1.0,
+        "c": 22.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 0.0,
+        "offerPrice": 45.0,
+        "trade": 0.0,
+        "previousClosingPrice": 22.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "ask": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        }
+      }
+    },
+    {
+      "symbol": "GFGC8900DI",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGC8900DI",
+        "q_bid": 5.0,
+        "px_bid": 76.0,
+        "px_ask": 230.0,
+        "q_ask": 1.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 0.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 69.5,
+        "offerPrice": 230.0,
+        "trade": 0.0,
+        "previousClosingPrice": 0.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": 6.5,
+          "pct_of_byma": 9.35251798561152
+        },
+        "ask": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        }
+      }
+    },
+    {
+      "symbol": "GFGC8900OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC8900OC",
+        "q_bid": 33.0,
+        "px_bid": 28.01,
+        "px_ask": 28.99,
+        "q_ask": 3.0,
+        "v": 1260.0,
+        "q_op": 223.0,
+        "c": 29.0,
+        "pct_change": -16.52
+      },
+      "byma": {
+        "bidPrice": 29.221,
+        "offerPrice": 32.998,
+        "trade": 29.2,
+        "previousClosingPrice": 34.74,
+        "volume": 259.0,
+        "tradeHour": "12:30:34"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -1.2109999999999985,
+          "pct_of_byma": -4.1442797987748525
+        },
+        "ask": {
+          "absolute": -4.007999999999999,
+          "pct_of_byma": -12.146190678222924
+        },
+        "price_vs_trade": {
+          "absolute": -0.1999999999999993,
+          "pct_of_byma": -0.6849315068493178
+        },
+        "volume": {
+          "absolute": 1001.0,
+          "pct_of_byma": 386.4864864864865
+        }
+      }
+    },
+    {
+      "symbol": "GFGC8900SE",
+      "byma_expiration": "2026-09-18",
+      "data912": {
+        "symbol": "GFGC8900SE",
+        "q_bid": 0.0,
+        "px_bid": 0.0,
+        "px_ask": 60.0,
+        "q_ask": 1.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 40.0,
+        "pct_change": -20.0
+      },
+      "byma": {
+        "bidPrice": 0.0,
+        "offerPrice": 0.0,
+        "trade": 0.0,
+        "previousClosingPrice": 40.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {}
+    },
+    {
+      "symbol": "GFGC9200DI",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGC9200DI",
+        "q_bid": 4.0,
+        "px_bid": 75.0,
+        "px_ask": 125.0,
+        "q_ask": 4.0,
+        "v": 1.0,
+        "q_op": 1.0,
+        "c": 140.0,
+        "pct_change": 38.61
+      },
+      "byma": {
+        "bidPrice": 71.0,
+        "offerPrice": 135.0,
+        "trade": 140.0,
+        "previousClosingPrice": 101.0,
+        "volume": 7.0,
+        "tradeHour": "11:19:32"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 4.0,
+          "pct_of_byma": 5.633802816901401
+        },
+        "ask": {
+          "absolute": -10.0,
+          "pct_of_byma": -7.4074074074074066
+        },
+        "price_vs_trade": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        },
+        "volume": {
+          "absolute": -6.0,
+          "pct_of_byma": -85.71428571428572
+        }
+      }
+    },
+    {
+      "symbol": "GFGC9200OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC9200OC",
+        "q_bid": 1.0,
+        "px_bid": 17.311,
+        "px_ask": 17.79,
+        "q_ask": 16.0,
+        "v": 776.0,
+        "q_op": 116.0,
+        "c": 17.79,
+        "pct_change": -15.46
+      },
+      "byma": {
+        "bidPrice": 17.733,
+        "offerPrice": 18.89,
+        "trade": 18.0,
+        "previousClosingPrice": 21.044,
+        "volume": 426.0,
+        "tradeHour": "13:33:13"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -0.4220000000000006,
+          "pct_of_byma": -2.3797439801500064
+        },
+        "ask": {
+          "absolute": -1.1000000000000014,
+          "pct_of_byma": -5.8231868713605195
+        },
+        "price_vs_trade": {
+          "absolute": -0.21000000000000085,
+          "pct_of_byma": -1.1666666666666714
+        },
+        "volume": {
+          "absolute": 350.0,
+          "pct_of_byma": 82.15962441314555
+        }
+      }
+    },
+    {
+      "symbol": "GFGC9500DI",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGC9500DI",
+        "q_bid": 10.0,
+        "px_bid": 82.0,
+        "px_ask": 98.0,
+        "q_ask": 10.0,
+        "v": 10.0,
+        "q_op": 0.0,
+        "c": 82.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 82.0,
+        "offerPrice": 119.991,
+        "trade": 0.0,
+        "previousClosingPrice": 0.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        },
+        "ask": {
+          "absolute": -21.991,
+          "pct_of_byma": -18.32720787392388
+        }
+      }
+    },
+    {
+      "symbol": "GFGC9500OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC9500OC",
+        "q_bid": 5.0,
+        "px_bid": 11.29,
+        "px_ask": 12.5,
+        "q_ask": 6.0,
+        "v": 1544.0,
+        "q_op": 226.0,
+        "c": 11.6,
+        "pct_change": -17.47
+      },
+      "byma": {
+        "bidPrice": 11.281,
+        "offerPrice": 11.89,
+        "trade": 11.281,
+        "previousClosingPrice": 14.057,
+        "volume": 508.0,
+        "tradeHour": "13:29:49"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 0.008999999999998565,
+          "pct_of_byma": 0.07978016133320942
+        },
+        "ask": {
+          "absolute": 0.6099999999999994,
+          "pct_of_byma": 5.130361648444071
+        },
+        "price_vs_trade": {
+          "absolute": 0.31899999999999906,
+          "pct_of_byma": 2.8277634961439535
+        },
+        "volume": {
+          "absolute": 1036.0,
+          "pct_of_byma": 203.93700787401573
+        }
+      }
+    },
+    {
+      "symbol": "GFGC9900OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGC9900OC",
+        "q_bid": 55.0,
+        "px_bid": 6.51,
+        "px_ask": 7.5,
+        "q_ask": 500.0,
+        "v": 2329.0,
+        "q_op": 153.0,
+        "c": 7.0,
+        "pct_change": -12.71
+      },
+      "byma": {
+        "bidPrice": 6.3,
+        "offerPrice": 7.24,
+        "trade": 6.477,
+        "previousClosingPrice": 8.02,
+        "volume": 2050.0,
+        "tradeHour": "13:26:27"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 0.20999999999999996,
+          "pct_of_byma": 3.3333333333333437
+        },
+        "ask": {
+          "absolute": 0.2599999999999998,
+          "pct_of_byma": 3.5911602209944826
+        },
+        "price_vs_trade": {
+          "absolute": 0.5229999999999997,
+          "pct_of_byma": 8.074725953373463
+        },
+        "volume": {
+          "absolute": 279.0,
+          "pct_of_byma": 13.609756097560965
+        }
+      }
+    },
+    {
+      "symbol": "GFGV10300O",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV10300O",
+        "q_bid": 10.0,
+        "px_bid": 3052.64,
+        "px_ask": 3823.29,
+        "q_ask": 2.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 0.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 3032.69,
+        "offerPrice": 3522.647,
+        "trade": 0.0,
+        "previousClosingPrice": 0.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": 19.949999999999818,
+          "pct_of_byma": 0.6578318258707583
+        },
+        "ask": {
+          "absolute": 300.64300000000003,
+          "pct_of_byma": 8.534576413702544
+        }
+      }
+    },
+    {
+      "symbol": "GFGV10700O",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV10700O",
+        "q_bid": 9.0,
+        "px_bid": 3451.22,
+        "px_ask": 4109.18,
+        "q_ask": 2.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 0.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 3431.26,
+        "offerPrice": 3916.982,
+        "trade": 0.0,
+        "previousClosingPrice": 0.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": 19.95999999999958,
+          "pct_of_byma": 0.5817105086761032
+        },
+        "ask": {
+          "absolute": 192.19800000000032,
+          "pct_of_byma": 4.906787930095158
+        }
+      }
+    },
+    {
+      "symbol": "GFGV11100O",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV11100O",
+        "q_bid": 9.0,
+        "px_bid": 3838.69,
+        "px_ask": 4522.01,
+        "q_ask": 2.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 0.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 3818.74,
+        "offerPrice": 4311.317,
+        "trade": 0.0,
+        "previousClosingPrice": 0.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": 19.950000000000273,
+          "pct_of_byma": 0.5224236266412552
+        },
+        "ask": {
+          "absolute": 210.6930000000002,
+          "pct_of_byma": 4.886975372026692
+        }
+      }
+    },
+    {
+      "symbol": "GFGV4200OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV4200OC",
+        "q_bid": 52.0,
+        "px_bid": 0.82,
+        "px_ask": 1.26,
+        "q_ask": 100.0,
+        "v": 744.0,
+        "q_op": 86.0,
+        "c": 0.82,
+        "pct_change": -24.83
+      },
+      "byma": {
+        "bidPrice": 0.82,
+        "offerPrice": 1.04,
+        "trade": 1.04,
+        "previousClosingPrice": 1.091,
+        "volume": 446.0,
+        "tradeHour": "13:31:21"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        },
+        "ask": {
+          "absolute": 0.21999999999999997,
+          "pct_of_byma": 21.153846153846146
+        },
+        "price_vs_trade": {
+          "absolute": -0.22000000000000008,
+          "pct_of_byma": -21.153846153846157
+        },
+        "volume": {
+          "absolute": 298.0,
+          "pct_of_byma": 66.81614349775784
+        }
+      }
+    },
+    {
+      "symbol": "GFGV4400OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV4400OC",
+        "q_bid": 1.0,
+        "px_bid": 1.52,
+        "px_ask": 1.522,
+        "q_ask": 50.0,
+        "v": 143.0,
+        "q_op": 40.0,
+        "c": 1.249,
+        "pct_change": 6.47
+      },
+      "byma": {
+        "bidPrice": 0.888,
+        "offerPrice": 1.55,
+        "trade": 0.889,
+        "previousClosingPrice": 1.173,
+        "volume": 133.0,
+        "tradeHour": "13:30:19"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 0.632,
+          "pct_of_byma": 71.17117117117118
+        },
+        "ask": {
+          "absolute": -0.028000000000000025,
+          "pct_of_byma": -1.806451612903226
+        },
+        "price_vs_trade": {
+          "absolute": 0.3600000000000001,
+          "pct_of_byma": 40.49493813273342
+        },
+        "volume": {
+          "absolute": 10.0,
+          "pct_of_byma": 7.518796992481214
+        }
+      }
+    },
+    {
+      "symbol": "GFGV4600DI",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGV4600DI",
+        "q_bid": 0.0,
+        "px_bid": 0.0,
+        "px_ask": 125.0,
+        "q_ask": 100.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 0.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 0.0,
+        "offerPrice": 125.0,
+        "trade": 0.0,
+        "previousClosingPrice": 0.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "ask": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        }
+      }
+    },
+    {
+      "symbol": "GFGV4600OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV4600OC",
+        "q_bid": 1.0,
+        "px_bid": 1.201,
+        "px_ask": 1.5,
+        "q_ask": 14.0,
+        "v": 230.0,
+        "q_op": 64.0,
+        "c": 1.5,
+        "pct_change": 7.14
+      },
+      "byma": {
+        "bidPrice": 1.0,
+        "offerPrice": 1.4,
+        "trade": 1.009,
+        "previousClosingPrice": 1.4,
+        "volume": 168.0,
+        "tradeHour": "13:29:55"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 0.20100000000000007,
+          "pct_of_byma": 20.10000000000001
+        },
+        "ask": {
+          "absolute": 0.10000000000000009,
+          "pct_of_byma": 7.14285714285714
+        },
+        "price_vs_trade": {
+          "absolute": 0.4910000000000001,
+          "pct_of_byma": 48.662041625371664
+        },
+        "volume": {
+          "absolute": 62.0,
+          "pct_of_byma": 36.904761904761905
+        }
+      }
+    },
+    {
+      "symbol": "GFGV4800OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV4800OC",
+        "q_bid": 13.0,
+        "px_bid": 1.5,
+        "px_ask": 2.35,
+        "q_ask": 24.0,
+        "v": 233.0,
+        "q_op": 43.0,
+        "c": 1.85,
+        "pct_change": 2.77
+      },
+      "byma": {
+        "bidPrice": 1.6,
+        "offerPrice": 1.7,
+        "trade": 1.509,
+        "previousClosingPrice": 1.8,
+        "volume": 108.0,
+        "tradeHour": "13:29:55"
+      },
+      "differences": {
+        "bid": {
+          "absolute": -0.10000000000000009,
+          "pct_of_byma": -6.25
+        },
+        "ask": {
+          "absolute": 0.6500000000000001,
+          "pct_of_byma": 38.23529411764708
+        },
+        "price_vs_trade": {
+          "absolute": 0.3410000000000002,
+          "pct_of_byma": 22.597746852220023
+        },
+        "volume": {
+          "absolute": 125.0,
+          "pct_of_byma": 115.74074074074075
+        }
+      }
+    },
+    {
+      "symbol": "GFGV5000OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV5000OC",
+        "q_bid": 7.0,
+        "px_bid": 2.55,
+        "px_ask": 3.7,
+        "q_ask": 30.0,
+        "v": 944.0,
+        "q_op": 165.0,
+        "c": 2.55,
+        "pct_change": -19.17
+      },
+      "byma": {
+        "bidPrice": 2.23,
+        "offerPrice": 2.7,
+        "trade": 2.222,
+        "previousClosingPrice": 3.155,
+        "volume": 219.0,
+        "tradeHour": "13:29:55"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 0.31999999999999984,
+          "pct_of_byma": 14.34977578475336
+        },
+        "ask": {
+          "absolute": 1.0,
+          "pct_of_byma": 37.037037037037024
+        },
+        "price_vs_trade": {
+          "absolute": 0.32799999999999985,
+          "pct_of_byma": 14.761476147614761
+        },
+        "volume": {
+          "absolute": 725.0,
+          "pct_of_byma": 331.05022831050223
+        }
+      }
+    },
+    {
+      "symbol": "GFGV5200OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV5200OC",
+        "q_bid": 142.0,
+        "px_bid": 4.5,
+        "px_ask": 4.85,
+        "q_ask": 32.0,
+        "v": 652.0,
+        "q_op": 168.0,
+        "c": 4.85,
+        "pct_change": -1.5
+      },
+      "byma": {
+        "bidPrice": 4.3,
+        "offerPrice": 4.65,
+        "trade": 4.3,
+        "previousClosingPrice": 4.924,
+        "volume": 402.0,
+        "tradeHour": "13:30:04"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 0.20000000000000018,
+          "pct_of_byma": 4.651162790697683
+        },
+        "ask": {
+          "absolute": 0.1999999999999993,
+          "pct_of_byma": 4.301075268817178
+        },
+        "price_vs_trade": {
+          "absolute": 0.5499999999999998,
+          "pct_of_byma": 12.790697674418606
+        },
+        "volume": {
+          "absolute": 250.0,
+          "pct_of_byma": 62.189054726368155
+        }
+      }
+    },
+    {
+      "symbol": "GFGV5400OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV5400OC",
+        "q_bid": 4.0,
+        "px_bid": 8.13,
+        "px_ask": 8.7,
+        "q_ask": 5.0,
+        "v": 250.0,
+        "q_op": 64.0,
+        "c": 8.7,
+        "pct_change": -2.9
+      },
+      "byma": {
+        "bidPrice": 6.71,
+        "offerPrice": 8.8,
+        "trade": 9.5,
+        "previousClosingPrice": 8.96,
+        "volume": 92.0,
+        "tradeHour": "12:15:36"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 1.4200000000000008,
+          "pct_of_byma": 21.162444113263803
+        },
+        "ask": {
+          "absolute": -0.10000000000000142,
+          "pct_of_byma": -1.1363636363636576
+        },
+        "price_vs_trade": {
+          "absolute": -0.8000000000000007,
+          "pct_of_byma": -8.421052631578952
+        },
+        "volume": {
+          "absolute": 158.0,
+          "pct_of_byma": 171.73913043478262
+        }
+      }
+    },
+    {
+      "symbol": "GFGV5600OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV5600OC",
+        "q_bid": 95.0,
+        "px_bid": 14.5,
+        "px_ask": 17.49,
+        "q_ask": 6.0,
+        "v": 2805.0,
+        "q_op": 374.0,
+        "c": 16.0,
+        "pct_change": -1.56
+      },
+      "byma": {
+        "bidPrice": 14.421,
+        "offerPrice": 15.2,
+        "trade": 15.2,
+        "previousClosingPrice": 16.254,
+        "volume": 1966.0,
+        "tradeHour": "13:30:19"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 0.07900000000000063,
+          "pct_of_byma": 0.5478122182927647
+        },
+        "ask": {
+          "absolute": 2.289999999999999,
+          "pct_of_byma": 15.065789473684198
+        },
+        "price_vs_trade": {
+          "absolute": 0.8000000000000007,
+          "pct_of_byma": 5.263157894736836
+        },
+        "volume": {
+          "absolute": 839.0,
+          "pct_of_byma": 42.67548321464902
+        }
+      }
+    },
+    {
+      "symbol": "GFGV5800OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV5800OC",
+        "q_bid": 115.0,
+        "px_bid": 28.0,
+        "px_ask": 28.97,
+        "q_ask": 29.0,
+        "v": 1401.0,
+        "q_op": 232.0,
+        "c": 28.0,
+        "pct_change": 1.54
+      },
+      "byma": {
+        "bidPrice": 28.0,
+        "offerPrice": 29.69,
+        "trade": 29.69,
+        "previousClosingPrice": 27.574,
+        "volume": 993.0,
+        "tradeHour": "13:29:45"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        },
+        "ask": {
+          "absolute": -0.7200000000000024,
+          "pct_of_byma": -2.4250589424048563
+        },
+        "price_vs_trade": {
+          "absolute": -1.6900000000000013,
+          "pct_of_byma": -5.692152239811388
+        },
+        "volume": {
+          "absolute": 408.0,
+          "pct_of_byma": 41.08761329305135
+        }
+      }
+    },
+    {
+      "symbol": "GFGV6000DI",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGV6000DI",
+        "q_bid": 1.0,
+        "px_bid": 55.0,
+        "px_ask": 300.0,
+        "q_ask": 51.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 0.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 0.0,
+        "offerPrice": 300.0,
+        "trade": 0.0,
+        "previousClosingPrice": 0.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "ask": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        }
+      }
+    },
+    {
+      "symbol": "GFGV6000OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV6000OC",
+        "q_bid": 1.0,
+        "px_bid": 49.1,
+        "px_ask": 49.69,
+        "q_ask": 3.0,
+        "v": 2629.0,
+        "q_op": 312.0,
+        "c": 49.69,
+        "pct_change": 5.92
+      },
+      "byma": {
+        "bidPrice": 48.52,
+        "offerPrice": 49.98,
+        "trade": 50.0,
+        "previousClosingPrice": 46.909,
+        "volume": 1435.0,
+        "tradeHour": "13:29:59"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 0.5799999999999983,
+          "pct_of_byma": 1.1953833470733644
+        },
+        "ask": {
+          "absolute": -0.28999999999999915,
+          "pct_of_byma": -0.5802320928371296
+        },
+        "price_vs_trade": {
+          "absolute": -0.3100000000000023,
+          "pct_of_byma": -0.6200000000000094
+        },
+        "volume": {
+          "absolute": 1194.0,
+          "pct_of_byma": 83.20557491289198
+        }
+      }
+    },
+    {
+      "symbol": "GFGV6200DI",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGV6200DI",
+        "q_bid": 3.0,
+        "px_bid": 90.0,
+        "px_ask": 280.0,
+        "q_ask": 1.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 0.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 100.0,
+        "offerPrice": 280.0,
+        "trade": 0.0,
+        "previousClosingPrice": 0.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": -10.0,
+          "pct_of_byma": -9.999999999999998
+        },
+        "ask": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        }
+      }
+    },
+    {
+      "symbol": "GFGV6200OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV6200OC",
+        "q_bid": 8.0,
+        "px_bid": 80.201,
+        "px_ask": 81.8,
+        "q_ask": 80.0,
+        "v": 455.0,
+        "q_op": 104.0,
+        "c": 81.8,
+        "pct_change": 7.56
+      },
+      "byma": {
+        "bidPrice": 78.5,
+        "offerPrice": 82.0,
+        "trade": 78.5,
+        "previousClosingPrice": 76.048,
+        "volume": 177.0,
+        "tradeHour": "13:29:49"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 1.7009999999999934,
+          "pct_of_byma": 2.1668789808917177
+        },
+        "ask": {
+          "absolute": -0.20000000000000284,
+          "pct_of_byma": -0.24390243902439046
+        },
+        "price_vs_trade": {
+          "absolute": 3.299999999999997,
+          "pct_of_byma": 4.2038216560509545
+        },
+        "volume": {
+          "absolute": 278.0,
+          "pct_of_byma": 157.06214689265536
+        }
+      }
+    },
+    {
+      "symbol": "GFGV6400DI",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGV6400DI",
+        "q_bid": 5.0,
+        "px_bid": 89.0,
+        "px_ask": 360.0,
+        "q_ask": 1.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 0.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 131.0,
+        "offerPrice": 360.0,
+        "trade": 0.0,
+        "previousClosingPrice": 0.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": -42.0,
+          "pct_of_byma": -32.06106870229007
+        },
+        "ask": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        }
+      }
+    },
+    {
+      "symbol": "GFGV6400OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV6400OC",
+        "q_bid": 1.0,
+        "px_bid": 124.0,
+        "px_ask": 126.99,
+        "q_ask": 5.0,
+        "v": 523.0,
+        "q_op": 134.0,
+        "c": 124.0,
+        "pct_change": 6.48
+      },
+      "byma": {
+        "bidPrice": 120.0,
+        "offerPrice": 126.0,
+        "trade": 124.1,
+        "previousClosingPrice": 116.45,
+        "volume": 369.0,
+        "tradeHour": "13:29:54"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 4.0,
+          "pct_of_byma": 3.3333333333333437
+        },
+        "ask": {
+          "absolute": 0.9899999999999949,
+          "pct_of_byma": 0.7857142857142785
+        },
+        "price_vs_trade": {
+          "absolute": -0.09999999999999432,
+          "pct_of_byma": -0.08058017727639033
+        },
+        "volume": {
+          "absolute": 154.0,
+          "pct_of_byma": 41.734417344173444
+        }
+      }
+    },
+    {
+      "symbol": "GFGV6600DI",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGV6600DI",
+        "q_bid": 3.0,
+        "px_bid": 125.0,
+        "px_ask": 410.0,
+        "q_ask": 1.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 0.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 190.0,
+        "offerPrice": 410.0,
+        "trade": 0.0,
+        "previousClosingPrice": 0.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": -65.0,
+          "pct_of_byma": -34.210526315789465
+        },
+        "ask": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        }
+      }
+    },
+    {
+      "symbol": "GFGV6600OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV6600OC",
+        "q_bid": 3.0,
+        "px_bid": 179.99,
+        "px_ask": 181.99,
+        "q_ask": 7.0,
+        "v": 923.0,
+        "q_op": 180.0,
+        "c": 181.98,
+        "pct_change": 7.42
+      },
+      "byma": {
+        "bidPrice": 175.01,
+        "offerPrice": 180.0,
+        "trade": 180.0,
+        "previousClosingPrice": 169.405,
+        "volume": 504.0,
+        "tradeHour": "13:14:58"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 4.980000000000018,
+          "pct_of_byma": 2.845551682760994
+        },
+        "ask": {
+          "absolute": 1.990000000000009,
+          "pct_of_byma": 1.1055555555555596
+        },
+        "price_vs_trade": {
+          "absolute": 1.9799999999999898,
+          "pct_of_byma": 1.0999999999999899
+        },
+        "volume": {
+          "absolute": 419.0,
+          "pct_of_byma": 83.13492063492063
+        }
+      }
+    },
+    {
+      "symbol": "GFGV6800DI",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGV6800DI",
+        "q_bid": 2.0,
+        "px_bid": 192.0,
+        "px_ask": 800.0,
+        "q_ask": 1.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 248.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 260.0,
+        "offerPrice": 505.0,
+        "trade": 0.0,
+        "previousClosingPrice": 248.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": -68.0,
+          "pct_of_byma": -26.15384615384615
+        },
+        "ask": {
+          "absolute": 295.0,
+          "pct_of_byma": 58.41584158415842
+        }
+      }
+    },
+    {
+      "symbol": "GFGV6800OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV6800OC",
+        "q_bid": 9.0,
+        "px_bid": 250.5,
+        "px_ask": 258.99,
+        "q_ask": 1.0,
+        "v": 505.0,
+        "q_op": 142.0,
+        "c": 255.0,
+        "pct_change": 7.5
+      },
+      "byma": {
+        "bidPrice": 247.611,
+        "offerPrice": 249.96,
+        "trade": 249.95,
+        "previousClosingPrice": 237.188,
+        "volume": 232.0,
+        "tradeHour": "13:25:57"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 2.88900000000001,
+          "pct_of_byma": 1.1667494578189164
+        },
+        "ask": {
+          "absolute": 9.030000000000001,
+          "pct_of_byma": 3.612578012482004
+        },
+        "price_vs_trade": {
+          "absolute": 5.050000000000011,
+          "pct_of_byma": 2.0204040808161627
+        },
+        "volume": {
+          "absolute": 273.0,
+          "pct_of_byma": 117.67241379310347
+        }
+      }
+    },
+    {
+      "symbol": "GFGV7000DI",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGV7000DI",
+        "q_bid": 2.0,
+        "px_bid": 278.0,
+        "px_ask": 571.0,
+        "q_ask": 3.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 350.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 395.0,
+        "offerPrice": 0.0,
+        "trade": 0.0,
+        "previousClosingPrice": 350.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": -117.0,
+          "pct_of_byma": -29.620253164556964
+        }
+      }
+    },
+    {
+      "symbol": "GFGV7000OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV7000OC",
+        "q_bid": 14.0,
+        "px_bid": 338.2,
+        "px_ask": 344.97,
+        "q_ask": 2.0,
+        "v": 1153.0,
+        "q_op": 230.0,
+        "c": 344.94,
+        "pct_change": 7.93
+      },
+      "byma": {
+        "bidPrice": 335.3,
+        "offerPrice": 336.0,
+        "trade": 336.0,
+        "previousClosingPrice": 319.578,
+        "volume": 690.0,
+        "tradeHour": "13:33:54"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 2.8999999999999773,
+          "pct_of_byma": 0.8648971070682965
+        },
+        "ask": {
+          "absolute": 8.970000000000027,
+          "pct_of_byma": 2.669642857142862
+        },
+        "price_vs_trade": {
+          "absolute": 8.939999999999998,
+          "pct_of_byma": 2.660714285714283
+        },
+        "volume": {
+          "absolute": 463.0,
+          "pct_of_byma": 67.10144927536233
+        }
+      }
+    },
+    {
+      "symbol": "GFGV7200DI",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGV7200DI",
+        "q_bid": 1.0,
+        "px_bid": 455.01,
+        "px_ask": 0.0,
+        "q_ask": 0.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 395.01,
+        "pct_change": -26.71
+      },
+      "byma": {
+        "bidPrice": 355.0,
+        "offerPrice": 0.0,
+        "trade": 0.0,
+        "previousClosingPrice": 395.01,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": 100.00999999999999,
+          "pct_of_byma": 28.17183098591549
+        }
+      }
+    },
+    {
+      "symbol": "GFGV7200OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV7200OC",
+        "q_bid": 1.0,
+        "px_bid": 450.01,
+        "px_ask": 458.99,
+        "q_ask": 1.0,
+        "v": 379.0,
+        "q_op": 71.0,
+        "c": 455.0,
+        "pct_change": 8.21
+      },
+      "byma": {
+        "bidPrice": 435.02,
+        "offerPrice": 464.3,
+        "trade": 446.547,
+        "previousClosingPrice": 420.468,
+        "volume": 268.0,
+        "tradeHour": "12:34:24"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 14.990000000000009,
+          "pct_of_byma": 3.4458185830536614
+        },
+        "ask": {
+          "absolute": -5.310000000000002,
+          "pct_of_byma": -1.1436571182425137
+        },
+        "price_vs_trade": {
+          "absolute": 8.452999999999975,
+          "pct_of_byma": 1.8929698329626987
+        },
+        "volume": {
+          "absolute": 111.0,
+          "pct_of_byma": 41.417910447761194
+        }
+      }
+    },
+    {
+      "symbol": "GFGV7400DI",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGV7400DI",
+        "q_bid": 8.0,
+        "px_bid": 560.0,
+        "px_ask": 0.0,
+        "q_ask": 0.0,
+        "v": 0.0,
+        "q_op": 2.0,
+        "c": 500.105,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 0.0,
+        "offerPrice": 0.0,
+        "trade": 0.0,
+        "previousClosingPrice": 500.105,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {}
+    },
+    {
+      "symbol": "GFGV7400OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV7400OC",
+        "q_bid": 9.0,
+        "px_bid": 555.0,
+        "px_ask": 575.55,
+        "q_ask": 1.0,
+        "v": 53.0,
+        "q_op": 3.0,
+        "c": 555.0,
+        "pct_change": 3.87
+      },
+      "byma": {
+        "bidPrice": 541.0,
+        "offerPrice": 599.97,
+        "trade": 559.0,
+        "previousClosingPrice": 534.302,
+        "volume": 3.0,
+        "tradeHour": "11:00:44"
+      },
+      "differences": {
+        "bid": {
+          "absolute": 14.0,
+          "pct_of_byma": 2.5878003696857776
+        },
+        "ask": {
+          "absolute": -24.420000000000073,
+          "pct_of_byma": -4.070203510175519
+        },
+        "price_vs_trade": {
+          "absolute": -4.0,
+          "pct_of_byma": -0.7155635062611854
+        },
+        "volume": {
+          "absolute": 50.0,
+          "pct_of_byma": 1666.6666666666667
+        }
+      }
+    },
+    {
+      "symbol": "GFGV7600OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV7600OC",
+        "q_bid": 1.0,
+        "px_bid": 621.0,
+        "px_ask": 750.5,
+        "q_ask": 1.0,
+        "v": 1.0,
+        "q_op": 0.0,
+        "c": 625.0,
+        "pct_change": -5.3
+      },
+      "byma": {
+        "bidPrice": 602.1,
+        "offerPrice": 810.0,
+        "trade": 0.0,
+        "previousClosingPrice": 660.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": 18.899999999999977,
+          "pct_of_byma": 3.139013452914785
+        },
+        "ask": {
+          "absolute": -59.5,
+          "pct_of_byma": -7.345679012345673
+        }
+      }
+    },
+    {
+      "symbol": "GFGV7800OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV7800OC",
+        "q_bid": 5.0,
+        "px_bid": 750.0,
+        "px_ask": 1050.0,
+        "q_ask": 17.0,
+        "v": 0.0,
+        "q_op": 1.0,
+        "c": 780.0,
+        "pct_change": -13.23
+      },
+      "byma": {
+        "bidPrice": 710.0,
+        "offerPrice": 1050.0,
+        "trade": 0.0,
+        "previousClosingPrice": 780.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": 40.0,
+          "pct_of_byma": 5.633802816901401
+        },
+        "ask": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        }
+      }
+    },
+    {
+      "symbol": "GFGV8000OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV8000OC",
+        "q_bid": 12.0,
+        "px_bid": 1000.0,
+        "px_ask": 1098.0,
+        "q_ask": 2.0,
+        "v": 0.0,
+        "q_op": 1.0,
+        "c": 1000.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 850.0,
+        "offerPrice": 1098.0,
+        "trade": 0.0,
+        "previousClosingPrice": 1000.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": 150.0,
+          "pct_of_byma": 17.647058823529417
+        },
+        "ask": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        }
+      }
+    },
+    {
+      "symbol": "GFGV8300DI",
+      "byma_expiration": "2026-12-18",
+      "data912": {
+        "symbol": "GFGV8300DI",
+        "q_bid": 10.0,
+        "px_bid": 1100.0,
+        "px_ask": 0.0,
+        "q_ask": 0.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 1100.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 1150.0,
+        "offerPrice": 0.0,
+        "trade": 0.0,
+        "previousClosingPrice": 1100.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": -50.0,
+          "pct_of_byma": -4.347826086956519
+        }
+      }
+    },
+    {
+      "symbol": "GFGV8300OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV8300OC",
+        "q_bid": 18.0,
+        "px_bid": 1100.0,
+        "px_ask": 1500.0,
+        "q_ask": 1.0,
+        "v": 0.0,
+        "q_op": 2.0,
+        "c": 1350.0,
+        "pct_change": 6.29
+      },
+      "byma": {
+        "bidPrice": 989.1,
+        "offerPrice": 1500.0,
+        "trade": 0.0,
+        "previousClosingPrice": 1350.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": 110.89999999999998,
+          "pct_of_byma": 11.212213123041149
+        },
+        "ask": {
+          "absolute": 0.0,
+          "pct_of_byma": 0.0
+        }
+      }
+    },
+    {
+      "symbol": "GFGV8600OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV8600OC",
+        "q_bid": 11.0,
+        "px_bid": 1407.72,
+        "px_ask": 1838.37,
+        "q_ask": 2.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 1555.11,
+        "pct_change": -5.75
+      },
+      "byma": {
+        "bidPrice": 1400.0,
+        "offerPrice": 1800.0,
+        "trade": 0.0,
+        "previousClosingPrice": 1555.11,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": 7.720000000000027,
+          "pct_of_byma": 0.5514285714285805
+        },
+        "ask": {
+          "absolute": 38.36999999999989,
+          "pct_of_byma": 2.131666666666665
+        }
+      }
+    },
+    {
+      "symbol": "GFGV8900OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV8900OC",
+        "q_bid": 11.0,
+        "px_bid": 1698.0,
+        "px_ask": 2091.75,
+        "q_ask": 2.0,
+        "v": 0.0,
+        "q_op": 3.0,
+        "c": 2022.5,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 1700.0,
+        "offerPrice": 2071.72,
+        "trade": 0.0,
+        "previousClosingPrice": 2022.5,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": -2.0,
+          "pct_of_byma": -0.11764705882353343
+        },
+        "ask": {
+          "absolute": 20.0300000000002,
+          "pct_of_byma": 0.9668294943332212
+        }
+      }
+    },
+    {
+      "symbol": "GFGV9200OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV9200OC",
+        "q_bid": 11.0,
+        "px_bid": 1988.28,
+        "px_ask": 2406.81,
+        "q_ask": 2.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 0.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 2000.0,
+        "offerPrice": 2386.78,
+        "trade": 0.0,
+        "previousClosingPrice": 0.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": -11.720000000000027,
+          "pct_of_byma": -0.5859999999999976
+        },
+        "ask": {
+          "absolute": 20.029999999999745,
+          "pct_of_byma": 0.8392059594935386
+        }
+      }
+    },
+    {
+      "symbol": "GFGV9500OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV9500OC",
+        "q_bid": 10.0,
+        "px_bid": 2319.66,
+        "px_ask": 2801.8,
+        "q_ask": 2.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 0.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 2299.71,
+        "offerPrice": 2730.0,
+        "trade": 0.0,
+        "previousClosingPrice": 0.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "bid": {
+          "absolute": 19.949999999999818,
+          "pct_of_byma": 0.8675006848689604
+        },
+        "ask": {
+          "absolute": 71.80000000000018,
+          "pct_of_byma": 2.6300366300366473
+        }
+      }
+    },
+    {
+      "symbol": "GFGV9900OC",
+      "byma_expiration": "2026-10-16",
+      "data912": {
+        "symbol": "GFGV9900OC",
+        "q_bid": 0.0,
+        "px_bid": 0.0,
+        "px_ask": 3123.992,
+        "q_ask": 1.0,
+        "v": 0.0,
+        "q_op": 0.0,
+        "c": 0.0,
+        "pct_change": 0.0
+      },
+      "byma": {
+        "bidPrice": 0.0,
+        "offerPrice": 3128.313,
+        "trade": 0.0,
+        "previousClosingPrice": 0.0,
+        "volume": 0.0,
+        "tradeHour": null
+      },
+      "differences": {
+        "ask": {
+          "absolute": -4.320999999999913,
+          "pct_of_byma": -0.13812556480121696
+        }
+      }
+    }
+  ]
+}
