@@ -1,164 +1,70 @@
-# Galicia options dashboard
+<div align="center">
 
-Galicia option chains for BYMA local shares (ARS, free BYMADATA Open, default)
-and the US-listed GGAL ADR (USD, Alpaca).
+<p><strong>BYMA · GGAL ADR · OPTIONS RESEARCH</strong></p>
 
-## Galicia volatility research
+# Galicia Options
 
-For the ADR, select **US · GGAL ADR · USD > Volatility index**. The saved Alpaca
-snapshot replays offline at its September 4, 2026 quote time, with New York expiry
-timing, per-expiry USD rate scenarios, quote-age checks and constituent exports.
-The first 30-day calculation is **46.12** using modified indicative quotes and
-an illustrative zero rate. OPRA access was denied, and very wide spreads make
-this a research diagnostic. Historical trade bars were retrieved separately and
-are never substituted for bid/ask quotes.
-See [ADR methodology and recorded results](GALICIA_ADR_VOLATILITY_RESEARCH.md).
+### A closer look at volatility, risk and the shape of an options strategy.
 
-```powershell
-python research/adr_research.py audit research/adr_snapshot_20260907_indicative.json
-```
+Explore Grupo Financiero Galicia across Argentina’s local market and its US-listed ADR.<br>
+One workspace for option chains, volatility smiles, sensitivities and expiration payoffs.
 
-Select BYMA, then **Workspace > Volatility index**. The new view evaluates the full
-retrieved chain independently of chain filters, shows liquidity by expiry, and
-implements VIX-style forward/strike selection and total-variance interpolation.
-It exports the audit and constituent weights. No last-trade fallback is used.
+**[Explore the dashboard](#inside-the-dashboard)** &nbsp; · &nbsp; **[Setup & usage](GUIDE.md)** &nbsp; · &nbsp; **[Research notes](#the-research-behind-the-screen)**
 
-The September 7 snapshot does not support a 30-day index: September has no usable
-two-sided prices and December no valid call/put pair. October supports a partial
-known-strike diagnostic (43.85% annualized under an illustrative zero continuous
-rate), with unresolved tails, undated quotes and American-exercise limitations.
-The default complete-strip mode fails on unresolved strikes; partial diagnostics
-are explicitly opt-in. ARS rates now default to the caución funding controls;
-manual expiry-specific scenarios remain available. No validated index is published.
+</div>
 
-## ARS funding curve
+<br>
 
-The BYMA volatility view and calculated IV/Greeks now support a caución curve
-with expiry matching, liquidity checks, log-discount interpolation, rate
-sensitivity and downloadable source audits. **Funding quality and conventions**
-contains the controls. Strict mode rejects the public feed's undated trades;
-**Allow undated caución observations for research** enables explicitly labeled
-diagnostics. Unsupported expiries stay unavailable, with no zero or stale-data
-fallback. Use **Refresh data** to refresh options and funding together.
+![Galicia Options dashboard showing call and put volatility smiles in the synthetic sample preview](docs/images/volatility-smile.png)
 
-An optional Bonistas LECAP reported-yield comparison and separately enabled
-fallback retain their sovereign-proxy labels. They do not constitute verified
-Treasury cash-flow bootstrapping. See [funding methodology and usage](ARS_FUNDING_METHODOLOGY.md).
+<p align="center"><em>The dashboard’s sample preview: call and put volatility across strikes, with the underlying price as a reference.</em></p>
 
-See [methodology, evidence and feasibility](GALICIA_VOLATILITY_RESEARCH.md).
-The implementation reproduces the uploaded Cboe example (13.927842 -> 13.93).
-Run `python research/audit_galicia.py research/byma_snapshot_20260907.json`
-to reproduce the recorded audit without network requests.
+## One company. Two markets. Different perspectives.
 
-## Free BYMA connection
+Galicia’s local shares and US-listed ADR each have their own option chains, currencies and data conventions. This project brings both into a focused research interface, with room to move from a single contract to the wider shape of the market.
 
-Select **BYMA · GGAL shares · ARS**. No credentials are needed. The app retrieves the
-public options panel and the GGAL 24hs underlying quote directly from BYMADATA Open.
-Calls, puts, expirations, bid/ask, last trade, volume, open interest and CSV export
-are available. Filters initially show the nearest expiration; select more to view
-the rest of the chain. Requests are cached for 60 seconds and spaced by at least
-one second within each fetch. Refresh requests a new snapshot.
+| 🇦🇷 Local shares | 🇺🇸 US-listed ADR |
+| :--- | :--- |
+| **BYMA · ARS** | **GGAL ADR · USD** |
+| Public BYMADATA Open connection, with no API key required. | Alpaca market data, with access determined by feed entitlements. |
+| Option-chain exploration and caución-based funding research. | Volatility smiles, option sensitivities and saved snapshot replay. |
 
-BYMA describes its open service as delayed by 20 minutes. Actual age cannot be
-verified from this response: it supplies trade hours without dates and no quote
-timestamps. Retrieval time is shown separately. The optional quote-age filter
-therefore excludes these undated quotes; leave it off to see them.
+## Inside the dashboard
 
-The free response supplies **no IV or Greeks**. Enable **Use calculated analytics**
-in the sidebar to estimate them with explicit model assumptions. Zero trades stay blank; previous
-close remains separate. Open interest is reported verbatim (including zeros),
-without assuming its completeness. Prices and premiums are in ARS, without
-contract-size multiplication. Only ARS / 24hs local GGAL option rows are included.
-Here "24hs" is the public feed's code 2 label: current BYMA rules settle option
-premiums T+0 and exercises T+1; the provider code does not override those rules.
+**Read the shape of volatility.** Compare calls and puts across strikes and expirations, switch between strike and moneyness, and explore Delta, Gamma, Theta, Vega and Rho. Optional calculated analytics make the model assumptions explicit.
 
-Explicit strikePrice is used when available. Otherwise short or decimal GFG
-codes are parsed. Five-digit strike codes can hide adjusted decimals; they remain
-in the table with an unresolved strike and are not subject to the strike slider.
-No scale is inferred from the underlying price. Expiry uses the provider's date.
+**Look beneath the curve.** Inspect individual contracts, bid–ask spreads and quote-quality labels. Filter the chain and export the observations behind the charts.
 
-The interface behind the public website is undocumented and may change. HTTPS
-certificate verification stays enabled. A failed request produces an error;
-it never silently falls back to a synthetic or old snapshot.
+![Option chain in the Galicia dashboard, showing synthetic contracts, prices and summary metrics](docs/images/option-chain.png)
 
-See [data source comparison and paid alternatives](DATA_SOURCES.md).
+**Give a strategy a shape.** Combine long or short calls, puts and shares, set entry premiums and contract sizes, and see how the combined payoff changes with the underlying price at expiration.
 
-## Run in your py4fi environment
+![Galicia payoff builder showing an illustrative two-call spread using sample data and hypothetical entry premiums](docs/images/payoff-builder.png)
 
-Double-click `start_dashboard.bat`, or run in a Conda terminal from this folder:
+<p align="center"><em>Actual application screenshots, captured in sample mode. Prices and analytics are synthetic; the payoff example uses hypothetical entry premiums.</em></p>
 
-```powershell
-conda activate py4fi
-python -m streamlit run app.py
-```
+## The research behind the screen
 
-Open http://localhost:8501. The launcher uses the existing `py4fi` environment and opens a browser.
-For a fresh installation, run `python -m pip install -r requirements.txt` inside `py4fi`.
+The project also explores VIX-style volatility calculations for Galicia, with saved observations, constituent-level audits and explicit funding assumptions. The aim is to make each result traceable to its inputs—and to show where the available data cannot support a result.
 
-## Connect to Alpaca (US ADR market)
+Current volatility-index outputs are **research diagnostics**. A validated Galicia 30-day index is not published. Feed limitations, missing quotes and American-option exercise features matter when interpreting the results.
 
-Enter your API key and secret in the dashboard's password fields. They are retained only in the Streamlit session.
-Alternatively copy `.env.example` to `.env` and fill in `APCA_API_KEY_ID` and `APCA_API_SECRET_KEY` locally.
-The same names can be set in environment variables or `.streamlit/secrets.toml`.
-`ALPACA_API_KEY` and `ALPACA_SECRET_KEY` environment variable aliases are also accepted.
-Never commit or share those files. No account or order endpoints are called.
+| Read more | What’s inside |
+| :--- | :--- |
+| [Setup & usage guide](GUIDE.md) | Installation, connections, controls, analytics conventions and validation commands. |
+| [Local-market volatility research](GALICIA_VOLATILITY_RESEARCH.md) | BYMA methodology, recorded evidence and feasibility. |
+| [ADR volatility research](GALICIA_ADR_VOLATILITY_RESEARCH.md) | Saved Alpaca observations, replay and quote-quality findings. |
+| [ARS funding methodology](ARS_FUNDING_METHODOLOGY.md) | Caución curves, expiry matching and funding assumptions. |
+| [Data sources](DATA_SOURCES.md) | Coverage, limitations and alternative providers. |
 
-A connection inside another app does not automatically expose credentials to this local Python program.
-The sample-data toggle provides an explicitly synthetic preview without credentials; it never substitutes for failed live requests.
+---
 
-## Features
+<div align="center">
 
-- Optional calculated IV and five Greeks for either market. Review the underlying
-  price, dividend yield and premium source in the sidebar, plus the ARS funding
-  controls above the chain. USD and manual ARS rates are continuous annual inputs.
-  Manual rate/yield defaults of zero are assumptions, not observed market rates.
-- Payoff builder tab: add/remove long or short calls, puts and shares for a single
-  expiration, set entry premiums and explicit contract multipliers, chart P/L and export CSV.
+**Built with Python · Streamlit · Plotly · pandas**
 
-Calculated analytics use European Black–Scholes–Merton, with calendar days/365.
-They do not model American early exercise. IV is annualized percent; Delta and Gamma
-are per underlying unit, Theta per day, Vega per one volatility percentage point,
-and Rho per one rate percentage point. Same-day/expired contracts, missing inputs
-and prices outside model bounds produce a reason in `model_status`. Zero-IV boundary
-prices have no calculated Greeks. Provider values remain in `reported_*` columns
-when calculations are enabled. Model inputs are included in the chain CSV.
-The payoff chart includes undiscounted premiums and excludes fees, financing and
-dividends. Displayed minimum/maximum P/L apply only to the chosen price range.
+A research workspace for exploring options. Market-data access only; no order execution.
 
-- Calls and puts, one or multiple expirations, strike and moneyness axes.
-- Implied-volatility smiles and charts for Delta, Gamma, Theta, Vega and Rho.
-- Contract details, bid/ask/mid/last, timestamps and CSV export.
-- Adjustable quote-age and relative bid–ask spread filters.
-- Explicit refresh with a 60-second session cache; all chain pages are retrieved.
-- OPRA and indicative options feeds; IEX and SIP underlying feeds.
+[Open the setup & usage guide →](GUIDE.md)
 
-## Interpretation
-
-The US market selection displays Nasdaq-listed GGAL ADR options, separate from the BYMA selection.
-Alpaca is not a Nasdaq-only venue feed.
-Adjusted roots such as GGAL1 are excluded. Prices are USD per underlying unit.
-In provider mode, IV is displayed as a percent; Greeks are unchanged Alpaca values, without contract-size scaling.
-The app does not infer or rescale Alpaca's Theta/Vega/Rho time or percentage conventions.
-Alpaca uses Black–Scholes; early exercise and dividends can affect American-option estimates.
-Missing or nonfinite provider analytics remain blank in provider mode. Calculated mode is explicitly labeled.
-Contracts are shown by default, with quote-status labels for zero-bid, crossed, stale or wide quotes.
-Enable the optional quality filter to hide those contracts. If it hides everything, use "Show available contracts".
-Outside trading hours, increase maximum quote age or disable filtering to see the last available observations.
-The last underlying trade can be stale, especially with IEX; its timestamp is displayed separately.
-
-Alpaca's indicative feed modifies quotes and delays trades. OPRA and SIP require the relevant data entitlements.
-See [option chain API](https://docs.alpaca.markets/us/reference/optionchain) and
-[Alpaca's explanation of missing Greeks](https://docs.alpaca.markets/us/docs/market-data-faq).
-
-## Validation
-
-```powershell
-conda run -n py4fi python -m unittest discover -s tests -v
-```
-
-Tests cover chain pagination, request failures, missing analytics, option-symbol parsing,
-quote quality, and dashboard filtering using synthetic fixtures and mocked API responses.
-Live US data requires local Alpaca credentials and suitable entitlements. BYMA needs no key.
-BYMA tests cover a recorded public response from September 4, 2026 (73 contracts),
-ambiguous strikes, missing dates, currency/settlement selection, service errors,
-and switching markets without carrying over incompatible filters.
+</div>
