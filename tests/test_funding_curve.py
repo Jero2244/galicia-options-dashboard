@@ -183,7 +183,8 @@ st.session_state['audit'] = audit
 
     def test_ars_iv_uses_expiry_rates_and_exports_provenance(self):
         now = datetime.now(timezone.utc)
-        rows = [row(d, r, asof=now) for d,r in [(7,.2),(30,.4)]]
+        # Tenors are fractional days now, so nodes must bracket them within the 14-day gap limit.
+        rows = [row(d, r, asof=now) for d,r in [(7,.2),(20,.3),(31,.4)]]
         script = '''
 from datetime import datetime, timedelta, timezone
 import pandas as pd

@@ -247,7 +247,7 @@ def smile_tab(selected, x, price, demo, calculated, currency):
 
 def greeks_tab(selected, x, price, demo, calculated, byma, currency):
     greek = st.selectbox("Sensitivity", list(GREEKS), format_func=str.capitalize, key="greek")
-    st.caption("Calculated BSM values per unit: Theta/day, Vega/volatility point, Rho/rate point." if calculated else
+    st.caption("Calculated binomial-lattice values per unit: Theta/day, Vega/volatility point, Rho/rate point." if calculated else
                "BYMADATA Open does not supply Greeks; enable calculated analytics in the sidebar." if byma else
                "Alpaca values as reported, without rescaling or multiplying by contract size.")
     chart(selected, greek, greek.capitalize(), x, price, demo, "greek_chart", currency)
@@ -277,7 +277,7 @@ def chain_tab(selected, fetched_at, demo, option_feed, currency):
 
 def methodology(byma):
     with st.expander("Data and methodology"):
-        st.caption("When calculated analytics are enabled, charts use your BSM assumptions. The provider descriptions below apply to reported values.")
+        st.caption("When calculated analytics are enabled, charts use your binomial-model assumptions. The provider descriptions below apply to reported values.")
         st.markdown(BYMA_NOTES if byma else ALPACA_NOTES)
 
 

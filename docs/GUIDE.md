@@ -135,10 +135,17 @@ The sample-data toggle provides an explicitly synthetic preview without credenti
 - Payoff builder tab: add/remove long or short calls, puts and shares for a single
   expiration, set entry premiums and explicit contract multipliers, chart P/L and export CSV.
 
-Calculated analytics use European Black–Scholes–Merton, with calendar days/365.
-They do not model American early exercise. IV is annualized percent; Delta and Gamma
+Calculated analytics use a Leisen–Reimer binomial lattice (101 steps by default, selectable) with
+American early exercise by default; choose European to reproduce Black–Scholes–Merton to about 5e-5.
+Dividends enter as a continuous yield. Time is ACT/365 from the snapshot time to the expiry-day
+cutoff, to the minute: 16:00 New York for the ADR and 15:30 Buenos Aires for BYMA (the repo's
+existing last-trading convention, not an asserted settlement time). Same-day expiries are valid
+until the cutoff. Implied volatility is solved on the lattice for the whole chain at once, and
+Greeks are central bump-and-reprice on the same lattice. A deep in-the-money American put priced
+at exactly intrinsic value has no identifiable volatility and returns zero IV.
+IV is annualized percent; Delta and Gamma
 are per underlying unit, Theta per day, Vega per one volatility percentage point,
-and Rho per one rate percentage point. Same-day/expired contracts, missing inputs
+and Rho per one rate percentage point. Expired contracts, missing inputs
 and prices outside model bounds produce a reason in `model_status`. Zero-IV boundary
 prices have no calculated Greeks. Provider values remain in `reported_*` columns
 when calculations are enabled. Model inputs are included in the chain CSV.

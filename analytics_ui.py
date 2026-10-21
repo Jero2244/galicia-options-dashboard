@@ -1,36 +1,58 @@
 """Dashboard controls for calculated analytics and expiration strategies."""
-from datetime import date
+from datetime import datetime, time, timezone
 import math
 
+import numpy as np
 import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from option_analytics import implied_volatility, calculate_greeks, build_payoff
+from alpaca_data import NY
+from option_analytics import STEPS, build_payoff, greeks_batch, solve_iv
+from volatility_index import BA, YEAR_MINUTES, expiry_minutes
 from funding_ui import ars_rate_controls
 
 
+def years_to_expiry(expirations, asof, currency):
+    """ACT/365 years from the snapshot to each expiry-day cutoff, at minute precision.
+
+    Cutoffs are the repo's existing conventions: 16:00 New York (US) and 15:30 Buenos Aires (BYMA).
+    Same-day expiries stay valid until the cutoff; the result is <= 0 once it has passed.
+    """
+    cutoff, zone = (time(15, 30), BA) if currency == "ARS" else (time(16), NY)
+    return {e: expiry_minutes(e, asof, cutoff, zone)/YEAR_MINUTES for e in expirations}
+
+
 @st.cache_data(max_entries=8, show_spinner="Calculating implied volatility and Greeks…")
-def _calculate(result, rates, funding_audit, model_spot, dividend, basis, today):
-    """Row-wise BSM solve. Cached so widget interactions elsewhere don't re-solve every contract."""
+def _calculate(result, rates, years, funding_audit, model_spot, dividend, basis, american, steps):
+    """Vectorised lattice solve for every contract. Cached so reruns elsewhere don't repeat it."""
     result = result.copy()
-    for index, row in result.iterrows():
-        try:
-            rate = rates.get(row.expiration)
-            if rate is None:
-                raise ValueError('Funding rate unavailable: '+funding_audit['matches'][row.expiration]['reason'])
-            time = (date.fromisoformat(str(row.expiration))-today).days/365
-            iv = implied_volatility(float(row[basis]), model_spot, float(row.strike), time, rate, row.type, dividend)
-            result.at[index, "iv_pct"] = 100*iv
-            if iv == 0:
-                result.at[index, "model_status"] = "Zero IV boundary; Greeks undefined"
-                continue
-            greeks = calculate_greeks(model_spot, float(row.strike), time, rate, iv, row.type, dividend)
-            for name, value in greeks.items():
-                result.at[index, name] = value
-            result.at[index, "model_status"] = "Calculated"
-        except (ValueError, TypeError, OverflowError) as exc:
-            result.at[index, "model_status"] = str(exc)
+    count = len(result)
+    sign = np.where(result.type.eq("Call"), 1., -1.)
+    rate = result.expiration.map(lambda e: rates.get(e)).astype(float).to_numpy()
+    expiry_years = result.expiration.map(years).astype(float).to_numpy()
+    strike = result.strike.astype(float).to_numpy()
+    premium = result[basis].astype(float).to_numpy()
+    spot = np.full(count, model_spot)
+    iv, errors = solve_iv(premium, spot, strike, expiry_years, rate, sign, dividend, american, steps)
+    status = errors.copy()
+    for position in np.flatnonzero(np.isnan(rate)):
+        reason = funding_audit['matches'][result.expiration.iloc[position]]['reason'] if funding_audit else 'missing rate'
+        status[position] = 'Funding rate unavailable: ' + reason
+        iv[position] = np.nan
+    solved = np.isfinite(iv) & (iv > 0)
+    status[np.isfinite(iv) & (iv == 0)] = "Zero IV boundary; Greeks undefined"
+    result["iv_pct"] = 100*iv
+    if solved.any():
+        values = greeks_batch(spot[solved], strike[solved], expiry_years[solved], rate[solved], iv[solved],
+                              sign[solved], dividend, american, steps)
+        stable = np.all([np.isfinite(v) for v in values.values()], axis=0)
+        position = np.flatnonzero(solved)
+        for name, column in values.items():
+            result.loc[result.index[position[stable]], name] = column[stable]
+        status[position[stable]] = "Calculated"
+        status[position[~stable]] = "Lattice unstable for these inputs"
+    result["model_status"] = status
     return result
 
 
@@ -38,7 +60,9 @@ def model_controls(frame, spot, today, currency, asof=None):
     funding_audit = None
     with st.sidebar.expander("Calculate IV and Greeks", expanded=True):
         enabled = st.checkbox("Use calculated analytics", key=f"calculate_{currency}")
-        st.caption("European Black–Scholes–Merton estimates; early exercise is not modeled.")
+        exercise = st.selectbox("Exercise style", ["American", "European"], key=f"exercise_{currency}")
+        steps = st.number_input("Lattice steps", min_value=21, max_value=501, value=STEPS, step=20, key=f"steps_{currency}")
+        st.caption("Leisen–Reimer binomial lattice. American allows early exercise; European matches Black–Scholes. More steps are slower but closer to the limit.")
         rate = None
         if currency != 'ARS' or not enabled:
             rate = st.number_input("Annual continuous rate (%)", value=0., min_value=-99., max_value=500., key=f"rate_{currency}") / 100
@@ -46,14 +70,17 @@ def model_controls(frame, spot, today, currency, asof=None):
         basis = st.selectbox("Premium used for IV", ["mid", "last", "bid", "ask"], key=f"basis_{currency}")
         model_spot = st.number_input(f"Model underlying price ({currency})", min_value=0.01,
                                      value=float(spot) if spot and math.isfinite(spot) and spot > 0 else 100., key=f"spot_{currency}")
-        st.caption("Review rate, yield and underlying price. Defaults are assumptions. Time uses calendar days / 365; same-day expiries are excluded. Last trades may be stale.")
+        st.caption("Review rate, yield and underlying price. Defaults are assumptions. Time runs from the snapshot to the expiry-day cutoff (16:00 New York, 15:30 Buenos Aires), ACT/365 to the minute; same-day expiries count until the cutoff. Last trades may be stale.")
     if not enabled:
         return frame
+    if currency == 'ARS' and asof is None:
+        raise ValueError('ARS funding requires the option snapshot valuation time')
+    asof = asof or datetime.now(timezone.utc)
+    expirations = sorted(frame.expiration.unique())
+    years = years_to_expiry(expirations, asof, currency)
     if currency == 'ARS':
-        if asof is None:
-            raise ValueError('ARS funding requires the option snapshot valuation time')
         with st.expander('ARS funding rates for IV and Greeks', expanded=True):
-            tenors = {e:(date.fromisoformat(str(e))-today).days for e in sorted(frame.expiration.unique())}
+            tenors = {e: years[e]*YEAR_MINUTES/1440 for e in expirations}
             rates, funding_audit = ars_rate_controls(tenors, asof, key='model_funding')
     else:
         rates = {e:rate for e in frame.expiration.unique()}
@@ -62,7 +89,12 @@ def model_controls(frame, spot, today, currency, asof=None):
     for name in names:
         result[f"reported_{name}"] = result[name]
         result[name] = float("nan")
-    result["analytics_source"] = "Calculated European BSM"
+    american = exercise == "American"
+    steps = int(steps) | 1
+    result["analytics_source"] = f"Calculated {exercise} binomial (Leisen–Reimer)"
+    result["model_exercise"] = exercise
+    result["model_lattice_steps"] = steps
+    result["model_years_to_expiry"] = result.expiration.map(years)
     result["model_spot"] = model_spot
     result["model_rate"] = result.expiration.map(rates)
     result["model_rate_source"] = result.expiration.map(
@@ -73,10 +105,11 @@ def model_controls(frame, spot, today, currency, asof=None):
         {e:m['reason'] for e,m in funding_audit['matches'].items()}) if funding_audit else 'Manual scenario'
     result["model_yield"] = dividend
     result["model_valuation_date"] = today.isoformat()
+    result["model_valuation_time"] = asof.isoformat()
     result["model_premium_basis"] = basis
     result["model_status"] = ""
-    result = _calculate(result, rates, funding_audit, model_spot, dividend, basis, today)
-    st.caption("Calculated European BSM analytics · Theta/day · Vega/1 volatility point · Rho/1 rate point. "
+    result = _calculate(result, rates, years, funding_audit, model_spot, dividend, basis, american, steps)
+    st.caption(f"Calculated {exercise} binomial analytics · Theta/day · Vega/1 volatility point · Rho/1 rate point. "
                "Original provider values are preserved in reported_* CSV columns. See model_status for missing estimates.")
     return result
 
