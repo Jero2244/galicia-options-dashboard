@@ -25,6 +25,11 @@ class AnalyticsTests(unittest.TestCase):
             implied_volatility(2, 100, 100, 0, 0)
         self.assertEqual(implied_volatility(0, 100, 100, 1, 0), 0)
 
+    def test_iv_tolerates_float_noise_at_intrinsic_boundary(self):
+        intrinsic = 100 - 100*math.exp(-.03)
+        for noise in (-1e-12, 0, 1e-12):
+            self.assertEqual(implied_volatility(intrinsic + noise, 100, 100, 1, .03, "call"), 0)
+
     def test_greeks_against_price_derivatives(self):
         h = .0001
         for kind in ("call", "put"):

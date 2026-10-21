@@ -166,8 +166,6 @@ def normalize(snapshots: dict, now: datetime | None = None) -> pd.DataFrame:
         bid, ask = number(quote.get("bp")), number(quote.get("ap"))
         valid_quote = bid is not None and ask is not None and 0 < bid <= ask
         mid = (bid + ask) / 2 if valid_quote else None
-        timestamp = pd.to_datetime(quote.get("t"), utc=True, errors="coerce")
-        age = (pd.Timestamp(now) - timestamp).total_seconds() / 60 if pd.notna(timestamp) else None
         iv = number(snapshot.get("impliedVolatility"))
         iv = iv if iv is not None and iv > 0 else None
         rows.append({"symbol": symbol, "expiration": expiry.isoformat(),
@@ -177,10 +175,16 @@ def normalize(snapshots: dict, now: datetime | None = None) -> pd.DataFrame:
                      "mid": mid, "last": number(trade.get("p")),
                      "iv_pct": iv * 100 if iv is not None else None,
                      "spread_pct": (ask - bid) / mid * 100 if valid_quote else None,
-                     "quote_time": timestamp, "quote_age_min": age,
+                     "quote_time": quote.get("t"),
                      "quote_valid": valid_quote, "source": "Alpaca",
                      **{g: number(greeks.get(g)) for g in GREEKS}})
-    return pd.DataFrame(rows).sort_values(["expiration", "type", "strike"]).reset_index(drop=True) if rows else pd.DataFrame()
+    if not rows:
+        return pd.DataFrame()
+    frame = pd.DataFrame(rows)
+    # Parse every timestamp in one call; per-row pd.to_datetime dominated normalize().
+    frame["quote_time"] = pd.to_datetime(frame["quote_time"], utc=True, errors="coerce", format="ISO8601")
+    frame["quote_age_min"] = (pd.Timestamp(now) - frame["quote_time"]).dt.total_seconds() / 60
+    return frame.sort_values(["expiration", "type", "strike"]).reset_index(drop=True)
 
 
 def quality_mask(frame: pd.DataFrame, max_age: float, max_spread: float):

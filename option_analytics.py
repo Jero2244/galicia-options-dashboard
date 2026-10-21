@@ -46,9 +46,10 @@ def implied_volatility(premium, spot, strike, time, rate, option_type="call", yi
         raise ValueError("IV requires time remaining before expiry.")
     s, k = spot*math.exp(-yield_rate*time), strike*math.exp(-rate*time)
     lower, upper = max(sign*(s-k), 0.), s if sign == 1 else k
-    if premium < lower or premium >= upper:
+    tol = 1e-9 * max(1., strike)  # absorb float noise at the intrinsic-value boundary
+    if premium < lower - tol or premium >= upper:
         raise ValueError("Premium is outside finite-IV model price bounds.")
-    if premium == lower:
+    if premium <= lower + tol:
         return 0.
     lo, hi = 0., 1.
     while bs_price(spot, strike, time, rate, hi, option_type, yield_rate) < premium:

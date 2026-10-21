@@ -86,6 +86,7 @@ def normalize_byma(items, start=None, end=None, now=None):
             continue
         symbol = item.get("symbol", "")
         strike = positive(item.get("strikePrice"))
+        strike = round(strike, 4) if strike else strike
         strike_source = "Provider field" if strike else "Unavailable: ambiguous symbol"
         match = re.fullmatch(r"GFG([CV])(\d+(?:\.\d*)?)[A-Z]{1,2}", symbol)
         if strike is None and match and ((match[1] == "C") == (side == "Call")):
@@ -94,6 +95,7 @@ def normalize_byma(items, start=None, end=None, now=None):
             # Retain those contracts, but do not invent a scale from the spot.
             if "." in encoded or len(encoded) <= 4:
                 strike = positive(encoded)
+                strike = round(strike, 4) if strike else strike
                 strike_source = "Symbol"
         bid, ask = number(item.get("bidPrice")), number(item.get("offerPrice"))
         valid = bid is not None and ask is not None and 0 < bid <= ask

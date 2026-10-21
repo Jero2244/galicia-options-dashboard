@@ -61,6 +61,8 @@ def single_term(frame, minutes, rate, allow_unresolved=False):
     if minutes <= 0 or not isfinite(rate) or abs(rate * minutes / YEAR_MINUTES) > 50:
         return fail("Invalid time or rate")
     f = frame.copy()
+    # Snap strikes to a fixed grid so float noise can't defeat the duplicate check or the (strike, type) lookup.
+    f['strike'] = f.strike.round(4)
     unknown = f.strike.isna() | ~f.strike.map(lambda x: isfinite(x) if pd.notna(x) else False) | (f.strike <= 0)
     if unknown.any():
         result['partial'] = True

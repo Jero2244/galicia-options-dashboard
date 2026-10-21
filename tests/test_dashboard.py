@@ -24,6 +24,16 @@ class DataTests(unittest.TestCase):
         self.assertTrue(pd.isna(frame.iloc[0].iv_pct))
         self.assertTrue(pd.isna(frame.iloc[0].vega))
 
+    def test_mixed_timestamp_formats_and_age(self):
+        quote = lambda t: {"latestQuote": {"bp": 2, "ap": 2.2, "t": t}}
+        frame = normalize({SYMBOL: quote("2026-09-03T16:00:00.123456789Z"),
+                           SYMBOL.replace("C", "P"): quote("2026-09-03T16:30:00Z"),
+                           SYMBOL.replace("45000", "46000"): quote("not a time")}, NOW)
+        ages = frame.set_index("symbol").quote_age_min
+        self.assertAlmostEqual(ages[SYMBOL], 60, places=1)
+        self.assertAlmostEqual(ages[SYMBOL.replace("C", "P")], 30)
+        self.assertTrue(pd.isna(ages[SYMBOL.replace("45000", "46000")]))
+
     def test_quote_quality_and_iv_percent(self):
         sample = {"latestQuote": {"bp": 2, "ap": 2.2, "t": NOW.isoformat()},
                   "impliedVolatility": .55}

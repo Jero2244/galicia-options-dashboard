@@ -4,7 +4,7 @@ import os
 
 import streamlit as st
 
-from alpaca_data import AlpacaData, DataError
+from alpaca_data import AlpacaData, DataError, normalize
 from byma_data import BymaData
 
 
@@ -29,7 +29,10 @@ def fetch_data(key, secret, option_feed, stock_feed, start, end):
         except DataError as exc:
             spot = {"price": None, "timestamp": None, "feed": stock_feed}
             warning = str(exc)
-        return snapshots, spot, datetime.now(timezone.utc), warning
+        fetched_at = datetime.now(timezone.utc)
+        # Normalised inside the cache so widget reruns don't re-parse the chain;
+        # quote age is measured at the snapshot time.
+        return normalize(snapshots, fetched_at), spot, fetched_at, warning
     finally:
         client.close()
 

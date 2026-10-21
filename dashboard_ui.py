@@ -5,7 +5,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from alpaca_data import DataError, GREEKS, NY, demo_data, normalize, quality_mask, quote_statuses
+from alpaca_data import DataError, GREEKS, NY, demo_data, quality_mask, quote_statuses
 from byma_data import BA, normalize_byma
 from analytics_ui import model_controls, payoff_builder
 from volatility_ui import volatility_panel
@@ -161,10 +161,9 @@ def load_snapshot(byma, conn, today):
         fetch_data.clear()
     try:
         with st.spinner("Loading the GGAL option chain from Alpaca…"):
-            snapshots, spot, fetched_at, spot_warning = fetch_data(
+            frame, spot, fetched_at, spot_warning = fetch_data(
                 conn["key"], conn["secret"], conn["option_feed"], conn["stock_feed"],
                 today, today + timedelta(days=horizon))
-        frame = normalize(snapshots)
     except DataError as exc:
         st.error(str(exc))
         st.stop()
