@@ -10,6 +10,30 @@ from option_analytics import implied_volatility, calculate_greeks, build_payoff
 from funding_ui import ars_rate_controls
 
 
+@st.cache_data(max_entries=8, show_spinner="Calculating implied volatility and Greeks…")
+def _calculate(result, rates, funding_audit, model_spot, dividend, basis, today):
+    """Row-wise BSM solve. Cached so widget interactions elsewhere don't re-solve every contract."""
+    result = result.copy()
+    for index, row in result.iterrows():
+        try:
+            rate = rates.get(row.expiration)
+            if rate is None:
+                raise ValueError('Funding rate unavailable: '+funding_audit['matches'][row.expiration]['reason'])
+            time = (date.fromisoformat(str(row.expiration))-today).days/365
+            iv = implied_volatility(float(row[basis]), model_spot, float(row.strike), time, rate, row.type, dividend)
+            result.at[index, "iv_pct"] = 100*iv
+            if iv == 0:
+                result.at[index, "model_status"] = "Zero IV boundary; Greeks undefined"
+                continue
+            greeks = calculate_greeks(model_spot, float(row.strike), time, rate, iv, row.type, dividend)
+            for name, value in greeks.items():
+                result.at[index, name] = value
+            result.at[index, "model_status"] = "Calculated"
+        except (ValueError, TypeError, OverflowError) as exc:
+            result.at[index, "model_status"] = str(exc)
+    return result
+
+
 def model_controls(frame, spot, today, currency, asof=None):
     funding_audit = None
     with st.sidebar.expander("Calculate IV and Greeks", expanded=True):
@@ -51,23 +75,7 @@ def model_controls(frame, spot, today, currency, asof=None):
     result["model_valuation_date"] = today.isoformat()
     result["model_premium_basis"] = basis
     result["model_status"] = ""
-    for index, row in result.iterrows():
-        try:
-            rate = rates.get(row.expiration)
-            if rate is None:
-                raise ValueError('Funding rate unavailable: '+funding_audit['matches'][row.expiration]['reason'])
-            time = (date.fromisoformat(str(row.expiration))-today).days/365
-            iv = implied_volatility(float(row[basis]), model_spot, float(row.strike), time, rate, row.type, dividend)
-            result.at[index, "iv_pct"] = 100*iv
-            if iv == 0:
-                result.at[index, "model_status"] = "Zero IV boundary; Greeks undefined"
-                continue
-            greeks = calculate_greeks(model_spot, float(row.strike), time, rate, iv, row.type, dividend)
-            for name, value in greeks.items():
-                result.at[index, name] = value
-            result.at[index, "model_status"] = "Calculated"
-        except (ValueError, TypeError, OverflowError) as exc:
-            result.at[index, "model_status"] = str(exc)
+    result = _calculate(result, rates, funding_audit, model_spot, dividend, basis, today)
     st.caption("Calculated European BSM analytics · Theta/day · Vega/1 volatility point · Rho/1 rate point. "
                "Original provider values are preserved in reported_* CSV columns. See model_status for missing estimates.")
     return result

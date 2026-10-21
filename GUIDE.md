@@ -108,6 +108,13 @@ python -m streamlit run app.py
 Open http://localhost:8501. The launcher uses the existing `py4fi` environment and opens a browser.
 For a fresh installation, run `python -m pip install -r requirements.txt` inside `py4fi`.
 
+## Windows executable
+
+Run `build_exe.bat` (PyInstaller, uses the `py4fi` environment). The result is the folder
+`dist\GaliciaOptions\`; copy the whole folder anywhere and run `GaliciaOptions.exe`. It starts the
+dashboard on a free local port (8501 if available) and opens your browser. Close the console window to quit.
+To use Alpaca credentials, place a `.env` file next to `GaliciaOptions.exe` (see `.env.example`).
+
 ## Connect to Alpaca (US ADR market)
 
 Enter your API key and secret in the dashboard's password fields. They are retained only in the Streamlit session.

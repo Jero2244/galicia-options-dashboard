@@ -188,20 +188,20 @@ def quality_mask(frame: pd.DataFrame, max_age: float, max_spread: float):
             & frame["spread_pct"].le(max_spread))
 
 
-def quote_status(row, max_age: float, max_spread: float) -> str:
-    reasons = []
-    if not row["quote_valid"]:
-        reasons.append("Missing, zero or crossed bid/ask")
-    age = row["quote_age_min"]
-    if pd.isna(age):
-        reasons.append("Missing quote timestamp")
-    elif age < 0:
-        reasons.append("Future quote timestamp")
-    elif age > max_age:
-        reasons.append("Stale quote")
-    if pd.notna(row["spread_pct"]) and row["spread_pct"] > max_spread:
-        reasons.append("Wide bid–ask spread")
-    return "; ".join(reasons) if reasons else "Passes quality checks"
+def quote_statuses(frame: pd.DataFrame, max_age: float, max_spread: float) -> pd.Series:
+    """Per-contract quality explanation, vectorised equivalent of the checks in quality_mask."""
+    age = frame["quote_age_min"]
+    checks = [
+        (~frame["quote_valid"].astype(bool), "Missing, zero or crossed bid/ask"),
+        (age.isna(), "Missing quote timestamp"),
+        (age < 0, "Future quote timestamp"),
+        (age > max_age, "Stale quote"),
+        (frame["spread_pct"] > max_spread, "Wide bid–ask spread"),
+    ]
+    status = pd.Series("", index=frame.index)
+    for failed, reason in checks:
+        status = status.where(~failed, status + (status.ne("").map({True: "; ", False: ""}) + reason))
+    return status.where(status.ne(""), "Passes quality checks")
 
 
 def demo_data(now: datetime | None = None):
