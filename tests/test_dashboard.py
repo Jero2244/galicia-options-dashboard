@@ -116,6 +116,10 @@ class DashboardTests(unittest.TestCase):
             self.assertTrue(any("No implied volatility" in item.value for item in at.info))
 
     def test_connection_screen_and_sample_filters(self):
+        # Connection/sample tests must not inherit developer credentials or .env.
+        self.enterContext(patch.dict("os.environ", {"APCA_API_KEY_ID": "", "APCA_API_SECRET_KEY": "", "ALPACA_API_KEY": "", "ALPACA_SECRET_KEY": ""}))
+        self.enterContext(patch("dotenv.load_dotenv", return_value=False))
+        self.enterContext(patch("alpaca_data.AlpacaData.chain", side_effect=AssertionError("Preview test must remain offline")))
         app = Path(__file__).resolve().parents[1] / "app.py"
         at = AppTest.from_file(str(app), default_timeout=20)
         at.session_state["market"] = "US · GGAL ADR · USD"

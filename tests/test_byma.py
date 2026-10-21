@@ -86,6 +86,10 @@ class BymaTests(unittest.TestCase):
         client.close()
 
     def test_byma_default_ui_and_market_switch(self):
+        # Connection/sample tests must not inherit developer credentials or .env.
+        self.enterContext(patch.dict("os.environ", {"APCA_API_KEY_ID": "", "APCA_API_SECRET_KEY": "", "ALPACA_API_KEY": "", "ALPACA_SECRET_KEY": ""}))
+        self.enterContext(patch("dotenv.load_dotenv", return_value=False))
+        self.enterContext(patch("alpaca_data.AlpacaData.chain", side_effect=AssertionError("Preview test must remain offline")))
         expiry = (datetime.now(timezone.utc) + timedelta(days=30)).date().isoformat()
         rows = [dict(sample(), maturityDate=expiry),
                 dict(sample(), maturityDate=expiry, symbol="GFGV10300O", optionType="PUT")]
