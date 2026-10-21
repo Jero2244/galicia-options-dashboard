@@ -30,7 +30,8 @@ def selftest():
     import plotly.express  # noqa: F401
     import dashboard_ui  # noqa: F401
     import streamlit.web.bootstrap  # noqa: F401
-    assert (BUNDLE_DIR / "app.py").is_file()
+    for name in ("app.py", "docs/GALICIA_VOLATILITY_RESEARCH.md", "docs/GALICIA_ADR_VOLATILITY_RESEARCH.md"):
+        assert (BUNDLE_DIR / name).is_file(), name
     print("selftest ok")
 
 

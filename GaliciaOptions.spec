@@ -1,7 +1,7 @@
 # PyInstaller spec. Build with build_exe.bat.
 from PyInstaller.utils.hooks import collect_all, copy_metadata
 
-datas = [("app.py", ".")]
+datas = [("app.py", "."), ("docs/GALICIA_VOLATILITY_RESEARCH.md", "docs"), ("docs/GALICIA_ADR_VOLATILITY_RESEARCH.md", "docs")]
 binaries = []
 hiddenimports = [
     # Imported by app.py at run time, which PyInstaller's analysis cannot see.

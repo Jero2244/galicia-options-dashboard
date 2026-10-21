@@ -8,7 +8,7 @@ import pdfplumber
 
 ROOT = Path(__file__).resolve().parents[1]
 rows = {'near': [], 'next': []}
-with pdfplumber.open(ROOT / 'Volatility_Index_Methodology_Cboe_Volatility_Index.pdf') as pdf:
+with pdfplumber.open(ROOT / 'docs' / 'Volatility_Index_Methodology_Cboe_Volatility_Index.pdf') as pdf:
     for page in pdf.pages[14:18]:
         for side, (x0, x1) in [('near', (0, page.width/2)), ('next', (page.width/2, page.width))]:
             text = page.crop((x0, 0, x1, page.height)).extract_text() or ''

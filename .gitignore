@@ -11,3 +11,4 @@ tmp/
 build/
 dist/
 .buildenv/
+node_modules/

@@ -5,5 +5,5 @@
 - Full test suite: `conda run -n py4fi python -m unittest discover -s tests -v`. Focused: `... -p "test_analytics.py" -v`.
 - Runtime dependencies are in `requirements.txt`; no lint, typecheck or build command is configured.
 - `app.py` loads `.env` from the repo root. Keep credentials in ignored `.env`/Streamlit secrets; `.env.example` documents names. Never add secrets to fixtures or research artifacts.
-- Tests use synthetic fixtures and mocked API responses. Live Alpaca checks need credentials and feed entitlements; BYMA is public. See `GUIDE.md`.
+- Tests use synthetic fixtures and mocked API responses. Live Alpaca checks need credentials and feed entitlements; BYMA is public. See `docs/GUIDE.md`.
 - `research/` holds dated data-source checks and snapshots; `reports/` holds one-off analysis outputs. The GGAL forecasting model lives in a separate repo (`options-valuation-model`).

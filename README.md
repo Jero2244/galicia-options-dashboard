@@ -9,7 +9,7 @@
 Explore Grupo Financiero Galicia across Argentina’s local market and its US-listed ADR.<br>
 One workspace for option chains, volatility smiles, sensitivities and expiration payoffs.
 
-**[Explore the dashboard](#inside-the-dashboard)** &nbsp; · &nbsp; **[Setup & usage](GUIDE.md)** &nbsp; · &nbsp; **[Research notes](#the-research-behind-the-screen)**
+**[Explore the dashboard](#inside-the-dashboard)** &nbsp; · &nbsp; **[Setup & usage](docs/GUIDE.md)** &nbsp; · &nbsp; **[Research notes](#the-research-behind-the-screen)**
 
 </div>
 
@@ -51,11 +51,11 @@ Current volatility-index outputs are **research diagnostics**. A validated Galic
 
 | Read more | What’s inside |
 | :--- | :--- |
-| [Setup & usage guide](GUIDE.md) | Installation, connections, controls, analytics conventions and validation commands. |
-| [Local-market volatility research](GALICIA_VOLATILITY_RESEARCH.md) | BYMA methodology, recorded evidence and feasibility. |
-| [ADR volatility research](GALICIA_ADR_VOLATILITY_RESEARCH.md) | Saved Alpaca observations, replay and quote-quality findings. |
-| [ARS funding methodology](ARS_FUNDING_METHODOLOGY.md) | Caución curves, expiry matching and funding assumptions. |
-| [Data sources](DATA_SOURCES.md) | Coverage, limitations and alternative providers. |
+| [Setup & usage guide](docs/GUIDE.md) | Installation, connections, controls, analytics conventions and validation commands. |
+| [Local-market volatility research](docs/GALICIA_VOLATILITY_RESEARCH.md) | BYMA methodology, recorded evidence and feasibility. |
+| [ADR volatility research](docs/GALICIA_ADR_VOLATILITY_RESEARCH.md) | Saved Alpaca observations, replay and quote-quality findings. |
+| [ARS funding methodology](docs/ARS_FUNDING_METHODOLOGY.md) | Caución curves, expiry matching and funding assumptions. |
+| [Data sources](docs/DATA_SOURCES.md) | Coverage, limitations and alternative providers. |
 
 ---
 
@@ -65,6 +65,6 @@ Current volatility-index outputs are **research diagnostics**. A validated Galic
 
 A research workspace for exploring options. Market-data access only; no order execution.
 
-[Open the setup & usage guide →](GUIDE.md)
+[Open the setup & usage guide →](docs/GUIDE.md)
 
 </div>

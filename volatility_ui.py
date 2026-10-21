@@ -162,7 +162,7 @@ def volatility_panel(frame, fetched_at, *, market='byma', asof=None, feed=None, 
     payload = json.loads(json.dumps(payload, default=str), parse_constant=lambda _: None)
     st.download_button("Download research audit (JSON)", json.dumps(payload, indent=2, allow_nan=False),
                        file_name=f'GGAL_{currency}_volatility_audit_{asof:%Y%m%d_%H%M%S}.json', mime='application/json')
-    report = Path(__file__).with_name('GALICIA_ADR_VOLATILITY_RESEARCH.md' if adr else 'GALICIA_VOLATILITY_RESEARCH.md')
+    report = Path(__file__).parent / 'docs' / ('GALICIA_ADR_VOLATILITY_RESEARCH.md' if adr else 'GALICIA_VOLATILITY_RESEARCH.md')
     if report.exists():
         st.download_button("Download methodology and feasibility report", report.read_text(encoding='utf-8'),
                            file_name=report.name, mime='text/markdown')
